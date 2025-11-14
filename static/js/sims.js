@@ -39,6 +39,9 @@
   let totalFiltered = 0;
   let currentPageIccids = [];
   let lastPageCount = 1;
+  let sortColumn = null;
+  let sortDirection = "asc";
+  let currentData = [];
 
   const clamp = (n, lo, hi) => Math.min(Math.max(n, lo), hi);
 
@@ -66,8 +69,25 @@
     return `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
   }
 
+
+  function sortData(data, column, direction) {
+    if (!column) return data;
+    const sorted = [...data].sort((a, b) => {
+      let valA = a[column] || "";
+      let valB = b[column] || "";
+      valA = String(valA).toLowerCase();
+      valB = String(valB).toLowerCase();
+      if (valA < valB) return direction === "asc" ? -1 : 1;
+      if (valA > valB) return direction === "asc" ? 1 : -1;
+      return 0;
+    });
+    return sorted;
+  }
+
   function renderRows(items, startIndex){
     tbody.innerHTML = '';
+    currentData = items;
+    const sortedItems = sortData(items, sortColumn, sortDirection);
     currentPageIccids = [];
 
     if (!items.length){
@@ -76,7 +96,7 @@
     }
     if (emptyMsg) emptyMsg.style.display = 'none';
 
-    items.forEach((it, idx) => {
+    sortedItems.forEach((it, idx) => {
       currentPageIccids.push(it.iccid);
       const tr = document.createElement('tr');
       tr.innerHTML = `
@@ -346,24 +366,21 @@
     await pollStatus();
 
     // Event listeners para ordenamiento
-    document.querySelectorAll('th.sortable').forEach(th => {
-      th.addEventListener('click', () => {
+    document.querySelectorAll("th.sortable").forEach(th => {
+      th.addEventListener("click", () => {
         const column = th.dataset.col;
-        
         if (sortColumn === column) {
-          sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+          sortDirection = sortDirection === "asc" ? "desc" : "asc";
         } else {
           sortColumn = column;
-          sortDirection = 'asc';
+          sortDirection = "asc";
         }
-        
-        document.querySelectorAll('th.sortable').forEach(h => {
-          h.classList.remove('asc', 'desc');
+        document.querySelectorAll("th.sortable").forEach(h => {
+          h.classList.remove("asc", "desc");
         });
         th.classList.add(sortDirection);
-        
         if (currentData.length > 0) {
-          renderRows(currentData);
+          renderRows(currentData, (currentPage * parseInt(pageSizeSel?.value || 50)));
         }
       });
     });
