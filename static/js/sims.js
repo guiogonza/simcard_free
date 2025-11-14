@@ -344,89 +344,28 @@
     setInterval(runAllBatches, hourlyMs);
     setInterval(pollStatus,    pollMs);
     await pollStatus();
+
+    // Event listeners para ordenamiento
+    document.querySelectorAll('th.sortable').forEach(th => {
+      th.addEventListener('click', () => {
+        const column = th.dataset.col;
+        
+        if (sortColumn === column) {
+          sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortColumn = column;
+          sortDirection = 'asc';
+        }
+        
+        document.querySelectorAll('th.sortable').forEach(h => {
+          h.classList.remove('asc', 'desc');
+        });
+        th.classList.add(sortDirection);
+        
+        if (currentData.length > 0) {
+          renderRows(currentData);
+        }
+      });
+    });
   })();
 })();
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});
