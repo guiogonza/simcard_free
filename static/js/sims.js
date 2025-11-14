@@ -82,6 +82,7 @@
       tr.innerHTML = `
         <td class="text-muted">${startIndex + idx + 1}</td>
         <td class="mono">${it.iccid || ''}</td>
+        <td class="mono">${it.msisdn || ''}</td>
         <td>${it.sim_id || ''}</td>
         <td>${it.country || ''}</td>
         <td>${it.operator || ''}</td>
@@ -207,6 +208,7 @@
         const ic = tr.cells[1].innerText.trim();
         const it = map.get(ic);
         if (it){
+          tr.cells[2].innerText = it.msisdn || '';
           tr.cells[3].innerText = it.sim_id || '';
           tr.cells[4].innerText = it.country || '';
           tr.cells[5].innerText = it.operator || '';
