@@ -19,6 +19,21 @@
     .hint { color:#0d6efd; font-weight: 500; }
     .input-page { width: 90px; }
     .cfg-badge { background:#e7f1ff; border:1px solid #cfe2ff; color:#0b5ed7; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e7f1ff !important; }
+    th.sortable::after { content: " "; font-size: 0.8em; color: #999; margin-left: 5px; }
+    th.sortable.asc::after { content: " "; color: #0d6efd; }
+    th.sortable.desc::after { content: " "; color: #0d6efd; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e7f1ff !important; }
+    th.sortable::after { content: " "; font-size: 0.8em; color: #999; margin-left: 5px; }
+    th.sortable.asc::after { content: " "; color: #0d6efd; }
+    th.sortable.desc::after { content: " "; color: #0d6efd; }
+    th.sortable { cursor: pointer; user-select: none; }
+    th.sortable:hover { background-color: #e7f1ff !important; }
+    th.sortable::after { content: " "; font-size: 0.8em; color: #999; margin-left: 5px; }
+    th.sortable.asc::after { content: " "; color: #0d6efd; }
+    th.sortable.desc::after { content: " "; color: #0d6efd; }
   </style>
 </head>
 <body>
@@ -98,16 +113,16 @@
             <thead class="table-light">
               <tr>
                 <th>#</th>
-                <th>ICCID</th>
-                <th>MSISDN</th>
-                <th>SIM ID</th>
-                <th>País</th>
-                <th>Operador</th>
-                <th>Billing Status</th>
-                <th>Inicio sesión datos</th>
-                <th>Status</th>
-                <th>Uso</th>
-                <th>Actualizado</th>
+                <th class="sortable" data-col="iccid">ICCID</th>
+                <th class="sortable" data-col="msisdn">MSISDN</th>
+                <th class="sortable" data-col="sim_id">SIM ID</th>
+                <th class="sortable" data-col="country">País</th>
+                <th class="sortable" data-col="operator">Operador</th>
+                <th class="sortable" data-col="billing_status">Billing Status</th>
+                <th class="sortable" data-col="start_fmt">Inicio sesión datos</th>
+                <th class="sortable" data-col="status">Status</th>
+                <th class="sortable" data-col="usage">Uso</th>
+                <th class="sortable" data-col="updated_at">Actualizado</th>
               </tr>
             </thead>
             <tbody></tbody>

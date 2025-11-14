@@ -82,11 +82,12 @@
       tr.innerHTML = `
         <td class="text-muted">${startIndex + idx + 1}</td>
         <td class="mono">${it.iccid || ''}</td>
+        <td class="mono">${it.imsi || ''}</td>
         <td class="mono">${it.msisdn || ''}</td>
         <td>${it.sim_id || ''}</td>
         <td>${it.country || ''}</td>
         <td>${it.operator || ''}</td>
-        <td>${it.billing_status || "-"}</td>
+        <td></td>
         <td>${it.start_fmt || ''}</td>
         <td>${statusBadge(it.status || '')}</td>
         <td>${it.usage || ''}</td>
@@ -208,11 +209,9 @@
         const ic = tr.cells[1].innerText.trim();
         const it = map.get(ic);
         if (it){
-          tr.cells[2].innerText = it.msisdn || '';
-          tr.cells[3].innerText = it.sim_id || '';
-          tr.cells[4].innerText = it.country || '';
-          tr.cells[5].innerText = it.operator || '';
-          tr.cells[6].innerText = it.billing_status || '-';
+          tr.cells[4].innerText = it.sim_id || '';
+          tr.cells[5].innerText = it.country || '';
+          tr.cells[6].innerText = it.operator || '';
           tr.cells[7].innerText = it.start_fmt || '';
           const st = (it.status||'').toUpperCase();
           let cls='status-other'; if(st==='ONLINE')cls='status-online'; else if(st==='OFFLINE')cls='status-offline'; else if(st==='ERROR'||st==='TIMEOUT')cls='status-error';
@@ -346,87 +345,3 @@
     await pollStatus();
   })();
 })();
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});
-
-// Event listeners para ordenamiento
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-      const column = th.dataset.col;
-      
-      // Toggle direction si es la misma columna
-      if (sortColumn === column) {
-        sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-      } else {
-        sortColumn = column;
-        sortDirection = 'asc';
-      }
-      
-      // Actualizar clases visuales
-      document.querySelectorAll('th.sortable').forEach(h => {
-        h.classList.remove('asc', 'desc');
-      });
-      th.classList.add(sortDirection);
-      
-      // Re-renderizar con los datos actuales
-      if (currentData.length > 0) {
-        renderRows(currentData);
-      }
-    });
-  });
-});

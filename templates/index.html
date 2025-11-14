@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIM Lookup – </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f7fafc; }
+    .brand-accent { color: #0d6efd; }
+    .card { border-radius: 12px; }
+    .kv { display:flex; justify-content:space-between; padding:.4rem 0; border-bottom:1px dashed #cfe2ff; }
+    .kv:last-child { border-bottom:0; }
+    .kv .k { color:#6c757d; }
+    .kv .v { color:#0b2e13; font-weight:600; }
+    #loadingOverlay { position: fixed; inset: 0; background: rgba(255,255,255,0.7);
+      display: none; align-items: center; justify-content: center; z-index: 1050; }
+  </style>
+</head>
+<body>
+  <div id="loadingOverlay">
+    <div class="text-center">
+      <div class="spinner-border text-primary" role="status" style="width:3rem;height:3rem"></div>
+      <div class="mt-3 text-primary fw-semibold">Buscando…</div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <header class="mb-4 d-flex justify-content-between">
+      <div>
+        <h1 class="h3 mb-1 brand-accent">Consulta de SIM (Kontigo)</h1>
+        <p class="text-muted mb-0">Ingresa un <strong>ICCID</strong> para obtener estado de sesión, uso y detalles.</p>
+      </div>
+      <a href="/sims" class="btn btn-outline-primary">Ver todas</a>
+    </header>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <form id="searchForm" method="POST" action="/" class="row g-3 align-items-end">
+          <div class="col-md-8">
+            <label for="iccid" class="form-label">ICCID</label>
+            <input type="text" id="iccid" name="iccid" class="form-control"
+                   placeholder="Ej: 89430301722110310032" value="{{ iccid or '' }}" required>
+            <div class="form-text text-muted">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="1" id="force" name="force">
+              <label class="form-check-label" for="force">Forzar actualización</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if error_message %}
+      <div id="errBox" class="alert alert-warning">{{ error_message }}</div>
+    {% endif %}
+
+    <div id="resultSection">
+      {% if iccid and not error_message %}
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100"><div class="card-body">
+              <h2 class="h5 mb-3 text-primary">Resumen</h2>
+              <div class="kv"><span class="k">ICCID</span><span class="v">{{ iccid or '—' }}</span></div>
+              <div class="kv"><span class="k">SIM ID</span><span class="v">{{ sim_id or '—' }}</span></div>
+              <div class="kv"><span class="k">Data Session Status</span>
+                <span class="v">
+                  {% if data_session_status %}
+                    <span class="badge bg-success-subtle border border-success text-success-emphasis" style="font-size:.9rem">
+                      {{ data_session_status }}
+                    </span>
+                  {% else %}—{% endif %}
+                </span>
+              </div>
+              <div class="kv"><span class="k">Uso en ciclo</span><span class="v">{{ data_usage or '—' }}</span></div>
+            </div></div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100"><div class="card-body">
+              <h2 class="h5 mb-3 text-info">Red Móvil</h2>
+              <div class="kv"><span class="k">País</span><span class="v">{{ country_name or '—' }}</span></div>
+              <div class="kv"><span class="k">Operador</span><span class="v">{{ operator_name or '—' }}</span></div>
+              <div class=" kv><span class=k>Billing Status</span><span class=>{{ billing_status or '' }}</span></div>
+              {% if start_day %}
+                <div class="kv">
+                  <span class="k">Inicio sesión datos</span>
+                  <span class="v">{{ start_day }}/{{ start_month }}/{{ start_year }} {{ start_hour }}:{{ start_minute }}</span>
+                </div>
+              {% endif %}
+              <!-- NUEVO: Última actualización -->
+              <div class="kv">
+                <span class="k">Última actualización</span>
+                <span class="v">{{ last_updated or '—' }}</span>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script src="/static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

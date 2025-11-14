@@ -1,0 +1,637 @@
+import os
+import csv
+import json
+import time
+import logging
+import threading
+import random
+from datetime import datetime, timedelta
+from typing import Dict, Any, List, Tuple
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+from flask import Flask, render_template, request, jsonify
+import requests
+from requests.auth import HTTPBasicAuth
+from requests.adapters import HTTPAdapter
+from requests.exceptions import Timeout, ConnectionError, HTTPError, RequestException
+
+app = Flask(__name__)
+app.logger.setLevel(logging.INFO)
+
+# Evitar cache del navegador
+@app.after_request
+def add_no_cache_headers(resp):
+    resp.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
+    return resp
+
+# ---------------- Config ----------------
+BASE_URL = os.getenv("FREEEWAY_BASE_URL", "https://ep.freeeway.com/services/portal/v1")
+USERNAME = os.getenv("FREEEWAY_USER", os.getenv("FREEEWAY_USERNAME", "gerencia@rastrear.com.co"))
+PASSWORD = os.getenv("FREEEWAY_PASS", os.getenv("FREEEWAY_PASSWORD", "JNYf62vz3xN9S8m"))
+
+HTTP_TIMEOUT = float(os.getenv("FREEEWAY_HTTP_TIMEOUT", "25"))
+MAX_RETRIES  = int(os.getenv("FREEEWAY_MAX_RETRIES", "4"))
+BACKOFF_BASE = float(os.getenv("FREEEWAY_BACKOFF_BASE", "0.8"))
+
+BATCH_SIZE = int(os.getenv("FREEEWAY_BATCH_SIZE", "50"))
+REFRESH_EVERY_SECONDS = int(os.getenv("FREEEWAY_REFRESH_SECONDS", str(60*60)))  # 1h
+
+WORKERS = int(os.getenv("FREEEWAY_WORKERS", "6"))                # bg refresco
+ONDEMAND_WORKERS = int(os.getenv("FREEEWAY_ONDEMAND_WORKERS", "4"))  # peticiones de la página
+
+HTTP_POOL_SIZE = max(16, (WORKERS + ONDEMAND_WORKERS) * 2)
+
+CACHE_PATH = os.getenv("FREEEWAY_CACHE_PATH", "cache.json")
+CSV_CANDIDATES = ["sim.csv", "./sim.csv", "/mnt/data/sim.csv"]
+
+# ---------------- Estado / Cache ----------------
+CACHE_LOCK = threading.Lock()
+GLOBAL_CACHE: Dict[str, Any] = {
+    "by_iccid": {},  # iccid -> {..., updated_at}
+    "meta": {"last_full_refresh": None, "progress": {"total": 0, "done": 0}}
+}
+
+INFLIGHT_LOCK = threading.Lock()
+INFLIGHT_ICCIDS = set()
+WORKER_PAUSE = threading.Event()  # pausa temporal cuando index hace llamada en vivo
+
+def save_cache():
+    with CACHE_LOCK:
+        data = json.dumps(GLOBAL_CACHE, ensure_ascii=False, indent=2)
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        f.write(data)
+
+def load_cache():
+    if not os.path.exists(CACHE_PATH):
+        return
+    try:
+        with open(CACHE_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        with CACHE_LOCK:
+            GLOBAL_CACHE.clear()
+            GLOBAL_CACHE.update(data)
+    except Exception as e:
+        app.logger.warning(f"No se pudo leer cache.json: {e}")
+
+# ---------------- Utilidades ----------------
+def _fmt_iso_ddmm(iso: str) -> str:
+    """Convierte 'YYYY-MM-DDTHH:MM:SSZ' a 'dd/mm/YYYY HH:MM'."""
+    if not iso:
+        return ""
+    try:
+        dt = datetime.strptime(iso, "%Y-%m-%dT%H:%M:%SZ")
+        return dt.strftime("%d/%m/%Y %H:%M")
+    except Exception:
+        return ""
+
+def _open_mcc_mnc():
+    candidates = [
+        "mcc-mnc-list.json", "./mcc-mnc-list.json",
+        "data/mcc-mnc-list.json", "./data/mcc-mnc-list.json",
+        "/mnt/data/mcc-mnc-list.json",
+    ]
+    for path in candidates:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            continue
+    return []
+
+_MCC_MNC_DATA = _open_mcc_mnc()
+
+def get_mcc_mnc_info(mcc: str, mnc: str) -> Tuple[str, str]:
+    for entry in _MCC_MNC_DATA:
+        if entry.get("mcc") == mcc and entry.get("mnc") == mnc:
+            return entry.get("countryName") or "", entry.get("operator") or ""
+    return "", ""
+
+def get_session_attributes(sim_details: dict) -> dict:
+    try:
+        si = sim_details["data"]["relationships"]["sessionInfo"]["data"]
+        if isinstance(si, dict) and "attributes" in si:
+            return si["attributes"]
+    except Exception:
+        pass
+    try:
+        for item in sim_details.get("included", []):
+            if item.get("type") == "SessionInfo" and "attributes" in item:
+                return item["attributes"]
+    except Exception:
+        pass
+    return {}
+
+def parse_data_session_start(raw: str):
+    if not raw or len(raw) < 14:
+        return (None,)*7
+    yyyy = raw[0:4]; mm = raw[4:6]; dd = raw[6:8]
+    HH = raw[8:10]; MM = raw[10:12]; SS = raw[12:14]
+    ms = "000"
+    if "." in raw and len(raw) >= 16:
+        ms = raw.split(".", 1)[1]
+    return yyyy, mm, dd, HH, MM, SS, ms
+
+def _find_csv_path():
+    for c in CSV_CANDIDATES:
+        if os.path.exists(c):
+            return c
+    return None
+
+def read_sims_csv() -> List[Dict[str, str]]:
+    path = _find_csv_path()
+    if not path:
+        return []
+    rows = []
+    with open(path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f, delimiter=';')
+        for r in reader:
+            rows.append({
+                "ICCID": (r.get("ICCID") or "").strip(),
+                "IMSI": (r.get("IMSI") or "").strip(),
+                "MSISDN": (r.get("MSISDN") or "").strip()
+            })
+    return rows
+
+# ---------------- HTTP Session + retries ----------------
+def make_session() -> requests.Session:
+    s = requests.Session()
+    adapter = HTTPAdapter(pool_connections=HTTP_POOL_SIZE, pool_maxsize=HTTP_POOL_SIZE)
+    s.mount("https://", adapter)
+    s.mount("http://", adapter)
+    return s
+
+def _get_json_with_retries(session: requests.Session, url: str) -> dict:
+    last_err = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            r = session.get(
+                url,
+                auth=HTTPBasicAuth(USERNAME, PASSWORD),
+                timeout=HTTP_TIMEOUT,
+            )
+            if r.status_code in (408, 429) or 500 <= r.status_code < 600:
+                raise HTTPError(f"{r.status_code} {r.reason}")
+            r.raise_for_status()
+            return r.json()
+        except (Timeout, ConnectionError, HTTPError, RequestException) as e:
+            last_err = e
+            sleep_s = BACKOFF_BASE * (2 ** attempt) + random.random() * 0.3
+            time.sleep(sleep_s)
+    raise last_err
+
+# ---------------- Enriquecimiento ----------------
+def fetch_sim_enrichment(iccid: str, session: requests.Session = None) -> Dict[str, Any]:
+    result = {" sim_id: \, untry: \, operator: \, start_fmt: \, status: \, Sage: \, billing_status: \}
+    local_session = session or make_session()
+    try:
+        data1 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard?filter=(IN iccid {iccid})")
+        if data1.get("meta", {}).get("count", 0) <= 0:
+            result["status"] = "NOT FOUND"
+            return result
+
+        sim_id = data1["data"][0]["id"]
+        result["sim_id"] = sim_id
+
+        data2 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard/{sim_id}?include=sessionInfo")
+        attrs = get_session_attributes(data2)
+
+        status = (attrs.get("dataSessionStatus") or "").upper()
+        result["status"] = status if status else "UNKNOWN"
+
+        dss = attrs.get("dataSessionStart")
+        if dss:
+            (yy, mm, dd, HH, MM, SS, ms) = parse_data_session_start(dss)
+            if yy and mm and dd and HH and MM:
+                result["start_fmt"] = f"{dd}/{mm}/{yy} {HH}:{MM}"
+
+        dmm = attrs.get("dataMccMnc")
+        if dmm and len(dmm) >= 4:
+            mcc, mnc = dmm[:3], dmm[3:]
+            ctry, oper = get_mcc_mnc_info(mcc, mnc)
+            result["country"] = ctry
+            result["operator"] = oper
+
+        data3 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard/{sim_id}/billingCycleUsageCounter")
+        val = float(data3["data"]["attributes"]["data"])
+        if val < 1_000_000:
+            val /= 1_000
+            result["usage"] = f"{val:.2f} KB"
+        else:
+            val /= 1_000_000
+            result["usage"] = f"{val:.2f} MB"
+
+        return result
+    except Exception as e:
+        app.logger.warning(f"Error enriqueciendo ICCID {iccid}: {e}")
+        result["status"] = "TIMEOUT" if isinstance(e, Timeout) else "ERROR"
+        return result
+
+def enrich_many_iccids(iccids: List[str], max_workers: int) -> Dict[str, Dict[str, Any]]:
+    results: Dict[str, Dict[str, Any]] = {}
+    if not iccids:
+        return results
+    iccids = list(dict.fromkeys(iccids))
+    workers = max(1, min(max_workers, len(iccids)))
+
+    def _job(ic):
+        s = make_session()
+        return ic, fetch_sim_enrichment(ic, session=s)
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        fut_map = {ex.submit(_job, ic): ic for ic in iccids}
+        for fut in as_completed(fut_map):
+            iccid = fut_map[fut]
+            try:
+                ic, info = fut.result()
+                results[ic] = info
+            except Exception as e:
+                app.logger.error(f"Fallo enriqueciendo {iccid}: {e}")
+                results[iccid] = {"status": "ERROR", "sim_id": "", "country": "", "operator": "", "start_fmt": "", "usage": ""}
+    return results
+
+# ---------------- Worker de refresco completo ----------------
+def full_refresh_once():
+    sims = read_sims_csv()
+    total = len(sims)
+    with CACHE_LOCK:
+        GLOBAL_CACHE["meta"]["progress"] = {"total": total, "done": 0}
+
+    app.logger.info(f"Inicio full refresh: {total} SIMs, lote={BATCH_SIZE}, workers={WORKERS}")
+
+    with CACHE_LOCK:
+        by_iccid = GLOBAL_CACHE.get("by_iccid", {}).copy()
+
+    done = 0
+    for i in range(0, total, BATCH_SIZE):
+        while WORKER_PAUSE.is_set():
+            time.sleep(0.05)
+
+        batch_rows = sims[i : i + BATCH_SIZE]
+        iccids = [r["ICCID"] for r in batch_rows if r.get("ICCID")]
+        batch_results = enrich_many_iccids(iccids, WORKERS)
+
+        now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        for iccid, info in batch_results.items():
+            by_iccid[iccid] = {**info, "updated_at": now}
+
+        done += len(iccids)
+        with CACHE_LOCK:
+            GLOBAL_CACHE["by_iccid"] = by_iccid
+            GLOBAL_CACHE["meta"]["progress"] = {"total": total, "done": done}
+        save_cache()
+        time.sleep(0.1)
+        app.logger.info(f"Lote {i//BATCH_SIZE + 1}: procesadas {done}/{total}")
+
+    with CACHE_LOCK:
+        GLOBAL_CACHE["meta"]["last_full_refresh"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    save_cache()
+    app.logger.info("Full refresh completado")
+
+def enrich_all_sims_loop():
+    while True:
+        try:
+            full_refresh_once()
+        except Exception as e:
+            app.logger.error(f"Fallo en full_refresh_once: {e}")
+        time.sleep(REFRESH_EVERY_SECONDS)
+
+def start_background_refresh():
+    load_cache()
+    t = threading.Thread(target=enrich_all_sims_loop, daemon=True)
+    t.start()
+    app.logger.info("Worker de refresco iniciado (daemon)")
+
+# ---------------- Vistas ----------------
+@app.route("/", methods=["GET", "POST"])
+def index():
+    iccid = None
+    sim_id = None
+    data_session_status = None
+    data_usage = None
+    error_message = None
+    country_name = None
+    operator_name = None
+
+    data_session_start = None
+    start_year = start_month = start_day = None
+    start_hour = start_minute = start_second = start_millisecond = None
+
+    # NUEVO: última actualización a mostrar en la tarjeta Red Móvil
+    last_updated = None
+
+    if request.method == "POST":
+        iccid = request.form.get("iccid", "").strip()
+        force = request.form.get("force", "0") == "1"
+
+        # ---- Intentar cache primero (si no se fuerza) ----
+        if not force:
+            with CACHE_LOCK:
+                cached = GLOBAL_CACHE.get("by_iccid", {}).get(iccid, {}).copy()
+            if cached:
+                sim_id = cached.get("sim_id") or sim_id
+                data_session_status = cached.get("status") or data_session_status
+                data_usage = cached.get("usage") or data_usage
+                country_name = cached.get("country") or country_name
+                operator_name = cached.get("operator") or operator_name
+
+                sf = (cached.get("start_fmt") or "").strip()
+                if sf and " " in sf:
+                    try:
+                        fecha, hora = sf.split(" ", 1)
+                        dd, mm, yy = fecha.split("/")
+                        HH, MM = hora.split(":")[0:2]
+                        start_day, start_month, start_year = dd, mm, yy
+                        start_hour, start_minute = HH, MM
+                    except Exception:
+                        pass
+
+                last_updated = _fmt_iso_ddmm(cached.get("updated_at"))
+
+                return render_template(
+                    "index.html",
+                    iccid=iccid, sim_id=sim_id,
+                    data_session_status=data_session_status,
+                    data_usage=data_usage,
+                    error_message=error_message,
+                    country_name=country_name,
+                    operator_name=operator_name,
+                    data_session_start=data_session_start,
+                    start_year=start_year, start_month=start_month, start_day=start_day,
+                    start_hour=start_hour, start_minute=start_minute,
+                    start_second=start_second, start_millisecond=start_millisecond,
+                    last_updated=last_updated,
+                )
+
+        # ---- Llamada en vivo (o forzada) ----
+        s = make_session()
+        WORKER_PAUSE.set()
+        try:
+            url1 = f"{BASE_URL}/simCard?filter=(IN iccid {iccid})"
+            data1 = _get_json_with_retries(s, url1)
+            if data1.get("meta", {}).get("count", 0) <= 0:
+                error_message = "No se encontró SIM con el ICCID proporcionado."
+            else:
+                sim_id = data1["data"][0]["id"]
+
+                url2 = f"{BASE_URL}/simCard/{sim_id}?include=sessionInfo"
+                data2 = _get_json_with_retries(s, url2)
+                attrs = get_session_attributes(data2)
+
+                data_session_status = (attrs.get("dataSessionStatus") or "Not Available")
+                dss = attrs.get("dataSessionStart")
+                if dss:
+                    (start_year, start_month, start_day,
+                     start_hour, start_minute, start_second,
+                     start_millisecond) = parse_data_session_start(dss)
+
+                dmm = attrs.get("dataMccMnc")
+                if dmm and len(dmm) >= 4:
+                    mcc, mnc = dmm[:3], dmm[3:]
+                    country_name, operator_name = get_mcc_mnc_info(mcc, mnc)
+
+                url3 = f"{BASE_URL}/simCard/{sim_id}/billingCycleUsageCounter"
+                data3 = _get_json_with_retries(s, url3)
+                val = float(data3["data"]["attributes"]["data"])
+                if val < 1_000_000:
+                    val /= 1_000
+                    data_usage = f"{val:.2f} KB"
+                else:
+                    val /= 1_000_000
+                    data_usage = f"{val:.2f} MB"
+
+                # Guardar en cache + marcar la hora 'now'
+                now_iso = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+                with CACHE_LOCK:
+                    GLOBAL_CACHE.setdefault("by_iccid", {})[iccid] = {
+                        "sim_id": sim_id,
+                        "status": (data_session_status or "").upper(),
+                        "usage": data_usage or "",
+                        "country": country_name or "",
+                        "operator": operator_name or "",
+                        "start_fmt": f"{start_day}/{start_month}/{start_year} {start_hour}:{start_minute}" if (start_day and start_month and start_year and start_hour and start_minute) else "",
+                        "updated_at": now_iso,
+                    }
+                save_cache()
+                last_updated = _fmt_iso_ddmm(now_iso)
+
+        except Exception as e:
+            # si falla, intentar mostrar desde cache
+            with CACHE_LOCK:
+                cached = GLOBAL_CACHE.get("by_iccid", {}).get(iccid, {}).copy()
+            if cached:
+                sim_id = cached.get("sim_id") or sim_id
+                data_session_status = cached.get("status") or data_session_status
+                data_usage = cached.get("usage") or data_usage
+                country_name = cached.get("country") or country_name
+                operator_name = cached.get("operator") or operator_name
+                sf = (cached.get("start_fmt") or "").strip()
+                if sf and " " in sf:
+                    try:
+                        fecha, hora = sf.split(" ", 1)
+                        dd, mm, yy = fecha.split("/")
+                        HH, MM = hora.split(":")[0:2]
+                        start_day, start_month, start_year = dd, mm, yy
+                        start_hour, start_minute = HH, MM
+                    except Exception:
+                        pass
+                last_updated = _fmt_iso_ddmm(cached.get("updated_at"))
+                error_message = f"(Desde cache) Error al consultar API: {e}"
+            else:
+                error_message = f"Error al consultar API: {e}"
+        finally:
+            WORKER_PAUSE.clear()
+
+    return render_template(
+        "index.html",
+        iccid=iccid,
+        sim_id=sim_id,
+        data_session_status=data_session_status,
+        data_usage=data_usage,
+        error_message=error_message,
+        country_name=country_name,
+        operator_name=operator_name,
+        data_session_start=data_session_start,
+        start_year=start_year, start_month=start_month, start_day=start_day,
+        start_hour=start_hour, start_minute=start_minute,
+        start_second=start_second, start_millisecond=start_millisecond,
+        last_updated=last_updated,
+    )
+
+@app.route("/sims", methods=["GET"])
+def sims_page():
+    return render_template("sims.html")
+
+# ---------------- APIs ----------------
+@app.route("/api/sims/status", methods=["GET"])
+def sims_status():
+    with CACHE_LOCK:
+        meta = GLOBAL_CACHE.get("meta", {}).copy()
+    total_sims = len(read_sims_csv())
+    meta.setdefault("progress", {}).setdefault("total", total_sims)
+
+    last = meta.get("last_full_refresh")  # ISO (UTC)
+    next_planned = None
+    if last:
+        try:
+            dt = datetime.strptime(last, "%Y-%m-%dT%H:%M:%SZ")
+            next_planned = (dt + timedelta(seconds=REFRESH_EVERY_SECONDS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        except Exception:
+            pass
+
+    cfg = {
+        "batch_size": BATCH_SIZE,
+        "ondemand_workers": ONDEMAND_WORKERS,
+        "workers": WORKERS,
+    }
+    return jsonify({"ok": True, "meta": meta, "total_sims": total_sims, "config": cfg, "next_planned": next_planned})
+
+@app.route("/api/sims/batch", methods=["POST"])
+def sims_batch_from_cache():
+    try:
+        payload = request.get_json(silent=True) or {}
+        offset = int(payload.get("offset", 0))
+        limit  = int(payload.get("limit", 50))
+        limit  = max(1, min(500, limit))
+        q_raw  = (payload.get("q") or "").strip().lower()
+
+        base = read_sims_csv()
+
+        with CACHE_LOCK:
+            by_iccid_snapshot = GLOBAL_CACHE.get("by_iccid", {}).copy()
+
+        def matches(row):
+            if not q_raw:
+                return True
+            iccid = (row["ICCID"] or "").lower()
+            imsi  = (row["IMSI"] or "").lower()
+            msisdn= (row["MSISDN"] or "").lower()
+            extra = by_iccid_snapshot.get(row["ICCID"], {})
+            country = (extra.get("country") or "").lower()
+            operator= (extra.get("operator") or "").lower()
+            return (q_raw in iccid) or (q_raw in imsi) or (q_raw in msisdn) or (q_raw in country) or (q_raw in operator)
+
+        filtered = [r for r in base if r.get("ICCID") and matches(r)]
+        total_filtered = len(filtered)
+
+        slice_rows = filtered[offset: offset + limit]
+        iccids = [(r.get("ICCID") or "").strip() for r in slice_rows if r.get("ICCID")]
+        iccids = list(dict.fromkeys(iccids))
+
+        with CACHE_LOCK:
+            by_iccid = GLOBAL_CACHE.get("by_iccid", {}).copy()
+        missing = [ic for ic in iccids if ic not in by_iccid]
+
+        with INFLIGHT_LOCK:
+            new_missing = [ic for ic in missing if ic not in INFLIGHT_ICCIDS]
+            for ic in new_missing:
+                INFLIGHT_ICCIDS.add(ic)
+
+        if new_missing:
+            try:
+                results = enrich_many_iccids(new_missing, ONDEMAND_WORKERS)
+                now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+                with CACHE_LOCK:
+                    for iccid in new_missing:
+                        info = results.get(iccid, {"status":"ERROR","sim_id":"","country":"","operator":"","start_fmt":"","usage":""})
+                        GLOBAL_CACHE.setdefault("by_iccid", {})[iccid] = {**info, "updated_at": now}
+                save_cache()
+            finally:
+                with INFLIGHT_LOCK:
+                    for ic in new_missing:
+                        INFLIGHT_ICCIDS.discard(ic)
+
+        with CACHE_LOCK:
+            by_iccid = GLOBAL_CACHE.get("by_iccid", {})
+            meta = GLOBAL_CACHE.get("meta", {}).copy()
+
+        items = []
+        for r in slice_rows:
+            iccid = r["ICCID"]
+            c = by_iccid.get(iccid, {})
+            items.append({
+                "iccid": iccid,
+                "imsi": r["IMSI"],
+                "msisdn": r["MSISDN"],
+                "sim_id":  c.get("sim_id", ""),
+                "country": c.get("country", ""),
+                "operator": c.get("operator", ""),
+                "start_fmt": c.get("start_fmt", ""),
+                "status":  c.get("status", ""),
+                "usage":   c.get("usage", ""),
+                "updated_at": c.get("updated_at", ""),
+            })
+
+        meta_out = {
+            "progress": meta.get("progress", {}),
+            "total_sims": len(base),
+            "filtered": total_filtered,
+            "config": {
+                "batch_size": BATCH_SIZE,
+                "ondemand_workers": ONDEMAND_WORKERS,
+                "workers": WORKERS,
+            },
+            "last_full_refresh": meta.get("last_full_refresh")
+        }
+
+        return jsonify({"ok": True, "offset": offset, "limit": limit, "count": len(items),
+                        "items": items, "meta": meta_out})
+    except Exception as e:
+        app.logger.error(f"/api/sims/batch error: {e}")
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+@app.route("/api/sims/refresh", methods=["POST"])
+def sims_refresh_specific():
+    try:
+        payload = request.get_json(silent=True) or {}
+        iccids = payload.get("iccids") or []
+        iccids = [str(x).strip() for x in iccids if str(x).strip()]
+        if not iccids:
+            return jsonify({"ok": False, "error": "iccids vacío"}), 400
+
+        iccids = list(dict.fromkeys(iccids))
+
+        with INFLIGHT_LOCK:
+            new_list = [ic for ic in iccids if ic not in INFLIGHT_ICCIDS]
+            for ic in new_list: INFLIGHT_ICCIDS.add(ic)
+
+        results_map = {}
+        try:
+            results_map = enrich_many_iccids(new_list, ONDEMAND_WORKERS)
+        finally:
+            with INFLIGHT_LOCK:
+                for ic in new_list: INFLIGHT_ICCIDS.discard(ic)
+
+        now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+        with CACHE_LOCK:
+            for ic in iccids:
+                info = results_map.get(ic, {"status":"ERROR","sim_id":"","country":"","operator":"","start_fmt":"","usage":""})
+                GLOBAL_CACHE.setdefault("by_iccid", {})[ic] = {**info, "updated_at": now}
+        save_cache()
+
+        items = []
+        with CACHE_LOCK:
+            by_iccid = GLOBAL_CACHE.get("by_iccid", {})
+        for ic in iccids:
+            c = by_iccid.get(ic, {})
+            items.append({
+                "iccid": ic,
+                "sim_id":  c.get("sim_id", ""),
+                "country": c.get("country", ""),
+                "operator": c.get("operator", ""),
+                "start_fmt": c.get("start_fmt", ""),
+                "status":  c.get("status", ""),
+                "usage":   c.get("usage", ""),
+                "updated_at": c.get("updated_at", ""),
+            })
+
+        return jsonify({"ok": True, "count": len(items), "items": items})
+    except Exception as e:
+        app.logger.error(f"/api/sims/refresh error: {e}")
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+# ---------------- Main ----------------
+if __name__ == "__main__":
+    start_background_refresh()
+    app.run(host="0.0.0.0", port=8090, debug=True, use_reloader=False)

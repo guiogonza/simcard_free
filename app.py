@@ -616,12 +616,17 @@ def sims_refresh_specific():
         save_cache()
 
         items = []
+        base = read_sims_csv()
+        csv_by_iccid = {row["ICCID"]: row for row in base if row.get("ICCID")}
+        
         with CACHE_LOCK:
             by_iccid = GLOBAL_CACHE.get("by_iccid", {})
         for ic in iccids:
             c = by_iccid.get(ic, {})
+            csv_row = csv_by_iccid.get(ic, {})
             items.append({
                 "iccid": ic,
+                "msisdn": csv_row.get("MSISDN", ""),
                 "sim_id":  c.get("sim_id", ""),
                 "country": c.get("country", ""),
                 "operator": c.get("operator", ""),

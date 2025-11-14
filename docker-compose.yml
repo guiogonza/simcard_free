@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  freeeway:
+    build: .
+    image: freeeway-sims:latest
+    container_name: freeeway-sims
+    ports:
+      - "8090:8090"
+    environment:
+      PORT: "8090"
+      FLASK_ENV: "production"
+      FREEEWAY_BATCH_SIZE: "50"
+      FREEEWAY_ONDEMAND_WORKERS: "4"
+      FREEEWAY_BG_WORKERS: "6"
+    volumes:
+      # monta tus archivos de datos para que el contenedor los vea
+      - ./sim.csv:/app/sim.csv:ro
+      - ./mcc-mnc-list.json:/app/mcc-mnc-list.json:ro
+      # si en el futuro guardas un snapshot en disco, mapea un volumen:
+      # - ./cache.json:/app/cache.json
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8090/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5

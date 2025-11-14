@@ -1,0 +1,4511 @@
+{
+  "by_iccid": {
+    "89430301722110310016": {
+      "sim_id": "143306",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:03",
+      "status": "OFFLINE",
+      "usage": "200.12 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310024": {
+      "sim_id": "143307",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "05/10/2024 14:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310032": {
+      "sim_id": "143308",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:33",
+      "status": "ONLINE",
+      "usage": "654.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310040": {
+      "sim_id": "143309",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:52",
+      "status": "ONLINE",
+      "usage": "1.45 MB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310057": {
+      "sim_id": "143310",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "26/01/2023 05:19",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310065": {
+      "sim_id": "143311",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:15",
+      "status": "ONLINE",
+      "usage": "924.94 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310073": {
+      "sim_id": "143312",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/09/2022 17:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310081": {
+      "sim_id": "143313",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:55",
+      "status": "ONLINE",
+      "usage": "967.69 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310099": {
+      "sim_id": "143314",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/08/2022 14:11",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310107": {
+      "sim_id": "143315",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:12",
+      "status": "ONLINE",
+      "usage": "1.00 MB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310115": {
+      "sim_id": "143316",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:54",
+      "status": "ONLINE",
+      "usage": "899.35 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310123": {
+      "sim_id": "143317",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/06/2022 02:53",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310131": {
+      "sim_id": "143318",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "24/04/2024 19:11",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310149": {
+      "sim_id": "143319",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "26/06/2022 05:46",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310156": {
+      "sim_id": "143320",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 19:29",
+      "status": "OFFLINE",
+      "usage": "3.25 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310164": {
+      "sim_id": "143321",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:23",
+      "status": "ONLINE",
+      "usage": "650.74 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310172": {
+      "sim_id": "143322",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "05/08/2023 00:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310180": {
+      "sim_id": "143323",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "10/07/2024 11:25",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310198": {
+      "sim_id": "143324",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:53",
+      "status": "ONLINE",
+      "usage": "951.17 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310206": {
+      "sim_id": "143325",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:25",
+      "status": "ONLINE",
+      "usage": "809.58 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310214": {
+      "sim_id": "143326",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/09/2024 23:48",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310222": {
+      "sim_id": "143327",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 19:39",
+      "status": "ONLINE",
+      "usage": "529.05 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310230": {
+      "sim_id": "143328",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:36",
+      "status": "ONLINE",
+      "usage": "435.78 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310248": {
+      "sim_id": "143329",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "391.43 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310255": {
+      "sim_id": "143330",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/02/2024 13:28",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310263": {
+      "sim_id": "143331",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:05",
+      "status": "ONLINE",
+      "usage": "593.68 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310271": {
+      "sim_id": "143332",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:52",
+      "status": "ONLINE",
+      "usage": "341.76 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310289": {
+      "sim_id": "143333",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:28",
+      "status": "ONLINE",
+      "usage": "450.29 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310297": {
+      "sim_id": "143334",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:23",
+      "status": "ONLINE",
+      "usage": "444.60 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310305": {
+      "sim_id": "143335",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/11/2022 17:35",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310313": {
+      "sim_id": "143336",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "06/09/2023 21:04",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310321": {
+      "sim_id": "143337",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:28",
+      "status": "ONLINE",
+      "usage": "895.97 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310339": {
+      "sim_id": "143338",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "12/10/2022 12:57",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310347": {
+      "sim_id": "143339",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/10/2025 01:29",
+      "status": "OFFLINE",
+      "usage": "138.75 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310354": {
+      "sim_id": "143340",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/09/2025 12:00",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310362": {
+      "sim_id": "143341",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 09:55",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310370": {
+      "sim_id": "143342",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 11:06",
+      "status": "OFFLINE",
+      "usage": "209.22 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310388": {
+      "sim_id": "143343",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 20:02",
+      "status": "ONLINE",
+      "usage": "1.04 MB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310396": {
+      "sim_id": "143344",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 21:39",
+      "status": "OFFLINE",
+      "usage": "839.87 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310404": {
+      "sim_id": "143345",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:29",
+      "status": "ONLINE",
+      "usage": "1.42 MB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310412": {
+      "sim_id": "143346",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "23/10/2023 17:07",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310420": {
+      "sim_id": "143347",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:51",
+      "status": "OFFLINE",
+      "usage": "834.27 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310438": {
+      "sim_id": "143348",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:37",
+      "status": "ONLINE",
+      "usage": "490.52 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310446": {
+      "sim_id": "143349",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "06/03/2025 15:48",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310453": {
+      "sim_id": "143350",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 16:01",
+      "status": "ONLINE",
+      "usage": "254.49 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310461": {
+      "sim_id": "143351",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 11:59",
+      "status": "ONLINE",
+      "usage": "345.16 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310479": {
+      "sim_id": "143352",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:39",
+      "status": "ONLINE",
+      "usage": "1.02 MB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310487": {
+      "sim_id": "143353",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:05",
+      "status": "ONLINE",
+      "usage": "625.38 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310495": {
+      "sim_id": "143354",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:06",
+      "status": "OFFLINE",
+      "usage": "217.39 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310503": {
+      "sim_id": "143355",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:24",
+      "status": "ONLINE",
+      "usage": "626.20 KB",
+      "updated_at": "2025-10-03T21:51:52Z"
+    },
+    "89430301722110310511": {
+      "sim_id": "143356",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/09/2025 20:43",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310529": {
+      "sim_id": "143357",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:15",
+      "status": "ONLINE",
+      "usage": "641.79 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310537": {
+      "sim_id": "143358",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 12:10",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310545": {
+      "sim_id": "143359",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "20/05/2025 15:23",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310552": {
+      "sim_id": "143360",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:54",
+      "status": "ONLINE",
+      "usage": "2.98 MB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310560": {
+      "sim_id": "143361",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 04:36",
+      "status": "OFFLINE",
+      "usage": "188.91 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310578": {
+      "sim_id": "143362",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:44",
+      "status": "ONLINE",
+      "usage": "572.99 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310586": {
+      "sim_id": "143363",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:38",
+      "status": "ONLINE",
+      "usage": "813.25 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310594": {
+      "sim_id": "143364",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:02",
+      "status": "ONLINE",
+      "usage": "932.84 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310602": {
+      "sim_id": "143365",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 12:13",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310610": {
+      "sim_id": "143366",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310628": {
+      "sim_id": "143367",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 17:38",
+      "status": "ONLINE",
+      "usage": "151.56 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310636": {
+      "sim_id": "143368",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 22:19",
+      "status": "ONLINE",
+      "usage": "780.93 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310644": {
+      "sim_id": "143369",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310651": {
+      "sim_id": "143370",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:15",
+      "status": "ONLINE",
+      "usage": "376.81 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310669": {
+      "sim_id": "143371",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:36",
+      "status": "ONLINE",
+      "usage": "416.85 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310677": {
+      "sim_id": "143372",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:16",
+      "status": "ONLINE",
+      "usage": "379.32 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310685": {
+      "sim_id": "143373",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 17:53",
+      "status": "ONLINE",
+      "usage": "388.32 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310693": {
+      "sim_id": "143374",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:02",
+      "status": "ONLINE",
+      "usage": "1.18 MB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310701": {
+      "sim_id": "143375",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:10",
+      "status": "ONLINE",
+      "usage": "1.92 MB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310719": {
+      "sim_id": "143376",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:01",
+      "status": "ONLINE",
+      "usage": "711.36 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310727": {
+      "sim_id": "143377",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:49",
+      "status": "ONLINE",
+      "usage": "708.46 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310735": {
+      "sim_id": "143378",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "26/04/2024 23:04",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310743": {
+      "sim_id": "143379",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:28",
+      "status": "ONLINE",
+      "usage": "905.52 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310750": {
+      "sim_id": "143380",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:53",
+      "status": "ONLINE",
+      "usage": "582.89 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310768": {
+      "sim_id": "143381",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "28/09/2022 13:20",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310776": {
+      "sim_id": "143382",
+      "country": "Malta",
+      "operator": "Mobile Communications Limited",
+      "start_fmt": "25/06/2025 13:42",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310784": {
+      "sim_id": "143383",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:59",
+      "status": "ONLINE",
+      "usage": "975.07 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310792": {
+      "sim_id": "143384",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "27/10/2022 19:56",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310800": {
+      "sim_id": "143385",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:48",
+      "status": "ONLINE",
+      "usage": "507.25 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310818": {
+      "sim_id": "143386",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:40",
+      "status": "ONLINE",
+      "usage": "676.29 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310826": {
+      "sim_id": "143387",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "04/08/2023 23:50",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310834": {
+      "sim_id": "143388",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 10:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310842": {
+      "sim_id": "143389",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "19/03/2025 16:55",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310859": {
+      "sim_id": "143390",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "06/10/2022 12:25",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310867": {
+      "sim_id": "143391",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/02/2024 21:16",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310875": {
+      "sim_id": "143392",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:44",
+      "status": "OFFLINE",
+      "usage": "1.06 MB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310883": {
+      "sim_id": "143393",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 19:23",
+      "status": "ONLINE",
+      "usage": "681.41 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310891": {
+      "sim_id": "143394",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "13/06/2023 19:02",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310909": {
+      "sim_id": "143395",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "05/07/2022 17:33",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310917": {
+      "sim_id": "143396",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:19",
+      "status": "ONLINE",
+      "usage": "513.23 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310925": {
+      "sim_id": "143397",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/10/2025 18:51",
+      "status": "OFFLINE",
+      "usage": "40.36 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310933": {
+      "sim_id": "143398",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:48",
+      "status": "ONLINE",
+      "usage": "709.60 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310941": {
+      "sim_id": "143399",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "25/05/2023 13:20",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310958": {
+      "sim_id": "143400",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:14",
+      "status": "ONLINE",
+      "usage": "932.46 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310966": {
+      "sim_id": "143401",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "27/11/2023 08:54",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310974": {
+      "sim_id": "143402",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "09/05/2022 09:47",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310982": {
+      "sim_id": "143403",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:47",
+      "status": "ONLINE",
+      "usage": "678.27 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110310990": {
+      "sim_id": "143404",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "15/10/2022 01:43",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722110311006": {
+      "sim_id": "143405",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "14/09/2023 13:03",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:53:18Z"
+    },
+    "89430301722122678046": {
+      "sim_id": "182688",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "13/08/2025 12:22",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678053": {
+      "sim_id": "182689",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "18/09/2025 15:18",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678061": {
+      "sim_id": "182690",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "07/10/2023 22:15",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678079": {
+      "sim_id": "182691",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/05/2025 16:55",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678087": {
+      "sim_id": "182692",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "21/09/2024 16:32",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678095": {
+      "sim_id": "182693",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 20:00",
+      "status": "ONLINE",
+      "usage": "755.68 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678103": {
+      "sim_id": "182694",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678111": {
+      "sim_id": "182695",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 19:37",
+      "status": "ONLINE",
+      "usage": "2.21 MB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678129": {
+      "sim_id": "182696",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/09/2025 21:43",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678137": {
+      "sim_id": "182697",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "07/09/2025 19:57",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678145": {
+      "sim_id": "182698",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "14/09/2025 14:41",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678152": {
+      "sim_id": "182699",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678160": {
+      "sim_id": "182700",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:34",
+      "status": "ONLINE",
+      "usage": "1.09 MB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678178": {
+      "sim_id": "182701",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 02:58",
+      "status": "OFFLINE",
+      "usage": "509.43 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678186": {
+      "sim_id": "182702",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:34",
+      "status": "ONLINE",
+      "usage": "763.01 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678194": {
+      "sim_id": "182703",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:40",
+      "status": "ONLINE",
+      "usage": "434.66 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678202": {
+      "sim_id": "182704",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "23/02/2024 19:52",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678210": {
+      "sim_id": "182705",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/02/2024 18:44",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678228": {
+      "sim_id": "182706",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:01",
+      "status": "ONLINE",
+      "usage": "831.61 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678236": {
+      "sim_id": "182707",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "06/04/2025 21:42",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678244": {
+      "sim_id": "182708",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/02/2024 22:16",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678251": {
+      "sim_id": "182709",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:25",
+      "status": "ONLINE",
+      "usage": "985.02 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678269": {
+      "sim_id": "182710",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:21",
+      "status": "ONLINE",
+      "usage": "774.07 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678541": {
+      "sim_id": "182738",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "206.38 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678277": {
+      "sim_id": "182711",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "13/08/2025 13:43",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678558": {
+      "sim_id": "182739",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:04",
+      "status": "ONLINE",
+      "usage": "1.41 MB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678285": {
+      "sim_id": "182712",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "06/05/2025 16:32",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678566": {
+      "sim_id": "182740",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:23",
+      "status": "ONLINE",
+      "usage": "837.10 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678293": {
+      "sim_id": "182713",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "12/07/2024 15:24",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678574": {
+      "sim_id": "182741",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 20:20",
+      "status": "ONLINE",
+      "usage": "528.91 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678301": {
+      "sim_id": "182714",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:48",
+      "status": "ONLINE",
+      "usage": "418.75 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678582": {
+      "sim_id": "182742",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/10/2025 05:08",
+      "status": "OFFLINE",
+      "usage": "52.09 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678319": {
+      "sim_id": "182715",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/04/2024 10:57",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678590": {
+      "sim_id": "182743",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:15",
+      "status": "ONLINE",
+      "usage": "312.18 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678327": {
+      "sim_id": "182716",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 14:26",
+      "status": "ONLINE",
+      "usage": "942.43 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678608": {
+      "sim_id": "182744",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/08/2025 14:42",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678335": {
+      "sim_id": "182717",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "07/06/2025 22:54",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678616": {
+      "sim_id": "182745",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:53",
+      "status": "ONLINE",
+      "usage": "1.66 MB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678343": {
+      "sim_id": "182718",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:08",
+      "status": "ONLINE",
+      "usage": "638.29 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678624": {
+      "sim_id": "182746",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678350": {
+      "sim_id": "182719",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:38",
+      "status": "ONLINE",
+      "usage": "672.62 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678632": {
+      "sim_id": "182747",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/09/2025 14:21",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678368": {
+      "sim_id": "182720",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:50",
+      "status": "OFFLINE",
+      "usage": "205.73 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678640": {
+      "sim_id": "182748",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:40",
+      "status": "OFFLINE",
+      "usage": "322.39 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678376": {
+      "sim_id": "182721",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:38",
+      "status": "OFFLINE",
+      "usage": "592.61 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678657": {
+      "sim_id": "182749",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:29",
+      "status": "ONLINE",
+      "usage": "4.09 MB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678384": {
+      "sim_id": "182722",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/09/2025 14:58",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678665": {
+      "sim_id": "182750",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678392": {
+      "sim_id": "182723",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "06/09/2025 14:16",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678673": {
+      "sim_id": "182751",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678400": {
+      "sim_id": "182724",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "25/10/2023 10:49",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678681": {
+      "sim_id": "182752",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678418": {
+      "sim_id": "182725",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "292.33 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678699": {
+      "sim_id": "182753",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/05/2025 20:20",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678426": {
+      "sim_id": "182726",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "08/09/2025 17:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678707": {
+      "sim_id": "182754",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "27/08/2025 18:31",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678434": {
+      "sim_id": "182727",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "12/01/2024 16:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678715": {
+      "sim_id": "182755",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 19:40",
+      "status": "ONLINE",
+      "usage": "519.18 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678442": {
+      "sim_id": "182728",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:37",
+      "status": "ONLINE",
+      "usage": "641.66 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678723": {
+      "sim_id": "182756",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 16:32",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678459": {
+      "sim_id": "182729",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 13:37",
+      "status": "ONLINE",
+      "usage": "317.06 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678731": {
+      "sim_id": "182757",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "07/06/2025 22:51",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678467": {
+      "sim_id": "182730",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:17",
+      "status": "ONLINE",
+      "usage": "403.56 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678749": {
+      "sim_id": "182758",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:46",
+      "status": "ONLINE",
+      "usage": "729.97 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678756": {
+      "sim_id": "182759",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:52",
+      "status": "ONLINE",
+      "usage": "888.39 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678764": {
+      "sim_id": "182760",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 07:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678772": {
+      "sim_id": "182761",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:16",
+      "status": "OFFLINE",
+      "usage": "726.70 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678780": {
+      "sim_id": "182762",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:52",
+      "status": "ONLINE",
+      "usage": "1.01 MB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678798": {
+      "sim_id": "182763",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:22",
+      "status": "ONLINE",
+      "usage": "1.44 MB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678806": {
+      "sim_id": "182764",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/02/2024 18:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678814": {
+      "sim_id": "182765",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/02/2024 16:14",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678822": {
+      "sim_id": "182766",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:26",
+      "status": "ONLINE",
+      "usage": "75.70 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678830": {
+      "sim_id": "182767",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "16/09/2025 15:56",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678848": {
+      "sim_id": "182768",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "10/07/2025 18:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678855": {
+      "sim_id": "182769",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 20:46",
+      "status": "ONLINE",
+      "usage": "454.35 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678863": {
+      "sim_id": "182770",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 10:35",
+      "status": "OFFLINE",
+      "usage": "877.58 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678871": {
+      "sim_id": "182771",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "12/03/2024 10:18",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678889": {
+      "sim_id": "182772",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "29/07/2025 19:20",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678897": {
+      "sim_id": "182773",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "07/07/2025 19:56",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678905": {
+      "sim_id": "182774",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 02:06",
+      "status": "OFFLINE",
+      "usage": "13.41 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678913": {
+      "sim_id": "182775",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 17:58",
+      "status": "ONLINE",
+      "usage": "587.46 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678921": {
+      "sim_id": "182776",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 00:10",
+      "status": "OFFLINE",
+      "usage": "126.29 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678939": {
+      "sim_id": "182777",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "01/10/2024 05:14",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678947": {
+      "sim_id": "182778",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 13:13",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678954": {
+      "sim_id": "182779",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "02/10/2024 17:10",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678962": {
+      "sim_id": "182780",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "24/09/2025 14:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678970": {
+      "sim_id": "182781",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "22/04/2025 18:31",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678988": {
+      "sim_id": "182782",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:32",
+      "status": "ONLINE",
+      "usage": "800.94 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122678996": {
+      "sim_id": "182783",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/10/2025 21:01",
+      "status": "OFFLINE",
+      "usage": "23.37 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122679002": {
+      "sim_id": "182784",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:05",
+      "status": "ONLINE",
+      "usage": "657.43 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122679010": {
+      "sim_id": "182785",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 15:14",
+      "status": "OFFLINE",
+      "usage": "456.84 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122679028": {
+      "sim_id": "182786",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:12",
+      "status": "ONLINE",
+      "usage": "960.03 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722122679036": {
+      "sim_id": "182787",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 02:00",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:56:32Z"
+    },
+    "89430301722229275191": {
+      "sim_id": "288989",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 21:41",
+      "status": "OFFLINE",
+      "usage": "268.38 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275209": {
+      "sim_id": "288990",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:32",
+      "status": "ONLINE",
+      "usage": "753.15 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275217": {
+      "sim_id": "288991",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:52",
+      "status": "ONLINE",
+      "usage": "1.40 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275225": {
+      "sim_id": "288992",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "18/03/2025 21:21",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275233": {
+      "sim_id": "288993",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:06",
+      "status": "ONLINE",
+      "usage": "1.07 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275241": {
+      "sim_id": "288994",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:52",
+      "status": "ONLINE",
+      "usage": "561.39 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275258": {
+      "sim_id": "288995",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:19",
+      "status": "ONLINE",
+      "usage": "767.83 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275266": {
+      "sim_id": "288996",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "28/07/2025 15:58",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275274": {
+      "sim_id": "288997",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "18/09/2025 19:21",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275282": {
+      "sim_id": "288998",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:32",
+      "status": "ONLINE",
+      "usage": "790.72 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275290": {
+      "sim_id": "288999",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:12",
+      "status": "OFFLINE",
+      "usage": "182.53 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275308": {
+      "sim_id": "289000",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 14:13",
+      "status": "ONLINE",
+      "usage": "573.62 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275316": {
+      "sim_id": "289001",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:30",
+      "status": "ONLINE",
+      "usage": "1.24 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275324": {
+      "sim_id": "289002",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "06/08/2025 17:33",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275332": {
+      "sim_id": "289003",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:09",
+      "status": "ONLINE",
+      "usage": "634.37 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275340": {
+      "sim_id": "289004",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/09/2025 12:30",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275357": {
+      "sim_id": "289005",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "21/05/2025 14:18",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275365": {
+      "sim_id": "289006",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 13:50",
+      "status": "ONLINE",
+      "usage": "616.68 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275373": {
+      "sim_id": "289007",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 05:21",
+      "status": "ONLINE",
+      "usage": "607.02 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275381": {
+      "sim_id": "289008",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 18:35",
+      "status": "ONLINE",
+      "usage": "744.23 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275399": {
+      "sim_id": "289009",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "18/07/2025 09:42",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275407": {
+      "sim_id": "289010",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "28/03/2025 18:26",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275415": {
+      "sim_id": "289011",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:03",
+      "status": "ONLINE",
+      "usage": "761.27 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275423": {
+      "sim_id": "289012",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 14:13",
+      "status": "ONLINE",
+      "usage": "905.41 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275431": {
+      "sim_id": "289013",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "31/07/2024 22:04",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275449": {
+      "sim_id": "289014",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:48",
+      "status": "ONLINE",
+      "usage": "265.34 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275456": {
+      "sim_id": "289015",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "08/04/2025 11:15",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275464": {
+      "sim_id": "289016",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:02",
+      "status": "ONLINE",
+      "usage": "1.05 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275472": {
+      "sim_id": "289017",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "12/10/2024 11:31",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275480": {
+      "sim_id": "289018",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "01/10/2025 02:45",
+      "status": "OFFLINE",
+      "usage": "139.20 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275498": {
+      "sim_id": "289019",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:32",
+      "status": "ONLINE",
+      "usage": "689.38 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275506": {
+      "sim_id": "289020",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 20:20",
+      "status": "ONLINE",
+      "usage": "588.38 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275514": {
+      "sim_id": "289021",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "01/07/2025 12:44",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275522": {
+      "sim_id": "289022",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:28",
+      "status": "OFFLINE",
+      "usage": "999.83 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275530": {
+      "sim_id": "289023",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "05/05/2025 13:55",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275548": {
+      "sim_id": "289024",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "27/08/2025 09:58",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275555": {
+      "sim_id": "289025",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:44",
+      "status": "ONLINE",
+      "usage": "604.99 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275563": {
+      "sim_id": "289026",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/09/2025 09:44",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275571": {
+      "sim_id": "289027",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:58",
+      "status": "OFFLINE",
+      "usage": "2.36 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275589": {
+      "sim_id": "289028",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 11:14",
+      "status": "ONLINE",
+      "usage": "708.02 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275597": {
+      "sim_id": "289029",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:12",
+      "status": "OFFLINE",
+      "usage": "668.91 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275605": {
+      "sim_id": "289030",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:09",
+      "status": "ONLINE",
+      "usage": "830.80 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275613": {
+      "sim_id": "289031",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 11:38",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275621": {
+      "sim_id": "289032",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:55",
+      "status": "ONLINE",
+      "usage": "718.75 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275639": {
+      "sim_id": "289033",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 21:53",
+      "status": "ONLINE",
+      "usage": "1.67 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275647": {
+      "sim_id": "289034",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:50",
+      "status": "ONLINE",
+      "usage": "994.88 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275654": {
+      "sim_id": "289035",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 10:55",
+      "status": "ONLINE",
+      "usage": "746.58 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275662": {
+      "sim_id": "289036",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:27",
+      "status": "OFFLINE",
+      "usage": "8.77 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275670": {
+      "sim_id": "289037",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:59",
+      "status": "ONLINE",
+      "usage": "1.08 MB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275688": {
+      "sim_id": "289038",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:48",
+      "status": "ONLINE",
+      "usage": "576.31 KB",
+      "updated_at": "2025-10-03T21:59:38Z"
+    },
+    "89430301722229275696": {
+      "sim_id": "289039",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:19",
+      "status": "ONLINE",
+      "usage": "1.19 MB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275704": {
+      "sim_id": "289040",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "21/08/2025 19:13",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275712": {
+      "sim_id": "289041",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "19/08/2025 15:08",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275720": {
+      "sim_id": "289042",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:30",
+      "status": "ONLINE",
+      "usage": "120.66 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275738": {
+      "sim_id": "289043",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 12:34",
+      "status": "OFFLINE",
+      "usage": "145.16 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275746": {
+      "sim_id": "289044",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:55",
+      "status": "ONLINE",
+      "usage": "214.26 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275753": {
+      "sim_id": "289045",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 13:12",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275761": {
+      "sim_id": "289046",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "15/08/2025 16:44",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275779": {
+      "sim_id": "289047",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 11:59",
+      "status": "ONLINE",
+      "usage": "506.88 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275787": {
+      "sim_id": "289048",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:44",
+      "status": "OFFLINE",
+      "usage": "1.58 MB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275795": {
+      "sim_id": "289049",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275803": {
+      "sim_id": "289050",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275811": {
+      "sim_id": "289051",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:46",
+      "status": "ONLINE",
+      "usage": "854.57 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275829": {
+      "sim_id": "289052",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:33",
+      "status": "ONLINE",
+      "usage": "803.90 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275837": {
+      "sim_id": "289053",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "15/08/2025 14:17",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275845": {
+      "sim_id": "289054",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:49",
+      "status": "OFFLINE",
+      "usage": "713.53 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275852": {
+      "sim_id": "289055",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 13:00",
+      "status": "OFFLINE",
+      "usage": "526.82 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275860": {
+      "sim_id": "289056",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 16:21",
+      "status": "ONLINE",
+      "usage": "436.63 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275878": {
+      "sim_id": "289057",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "02/10/2025 00:57",
+      "status": "ONLINE",
+      "usage": "280.92 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275886": {
+      "sim_id": "289058",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/12/2024 19:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275894": {
+      "sim_id": "289059",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275902": {
+      "sim_id": "289060",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:53",
+      "status": "ONLINE",
+      "usage": "649.29 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275910": {
+      "sim_id": "289061",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:05",
+      "status": "ONLINE",
+      "usage": "1.29 MB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275928": {
+      "sim_id": "289062",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:35",
+      "status": "ONLINE",
+      "usage": "395.98 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275936": {
+      "sim_id": "289063",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 04:17",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275944": {
+      "sim_id": "289064",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:56",
+      "status": "ONLINE",
+      "usage": "795.40 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275951": {
+      "sim_id": "289065",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:20",
+      "status": "ONLINE",
+      "usage": "857.27 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275969": {
+      "sim_id": "289066",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "04/08/2025 19:56",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275977": {
+      "sim_id": "289067",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:12",
+      "status": "ONLINE",
+      "usage": "1.07 MB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275985": {
+      "sim_id": "289068",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 21:14",
+      "status": "ONLINE",
+      "usage": "441.15 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229275993": {
+      "sim_id": "289069",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "24/03/2025 17:14",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276009": {
+      "sim_id": "289070",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:42",
+      "status": "ONLINE",
+      "usage": "527.09 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276017": {
+      "sim_id": "289071",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:48",
+      "status": "ONLINE",
+      "usage": "195.41 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276025": {
+      "sim_id": "289072",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 19:16",
+      "status": "ONLINE",
+      "usage": "669.92 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276033": {
+      "sim_id": "289073",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 10:35",
+      "status": "ONLINE",
+      "usage": "165.31 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276041": {
+      "sim_id": "289074",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 11:29",
+      "status": "ONLINE",
+      "usage": "160.80 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276058": {
+      "sim_id": "289075",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "11/07/2024 22:31",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276066": {
+      "sim_id": "289076",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/07/2025 14:14",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276074": {
+      "sim_id": "289077",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:56",
+      "status": "ONLINE",
+      "usage": "521.82 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276082": {
+      "sim_id": "289078",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:13",
+      "status": "ONLINE",
+      "usage": "284.02 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276090": {
+      "sim_id": "289079",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "06/05/2025 14:34",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276108": {
+      "sim_id": "289080",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 15:57",
+      "status": "ONLINE",
+      "usage": "768.37 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276116": {
+      "sim_id": "289081",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 16:09",
+      "status": "OFFLINE",
+      "usage": "43.95 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276124": {
+      "sim_id": "289082",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/09/2025 10:50",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276132": {
+      "sim_id": "289083",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/03/2025 21:32",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276140": {
+      "sim_id": "289084",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/08/2025 15:07",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276157": {
+      "sim_id": "289085",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:55",
+      "status": "ONLINE",
+      "usage": "498.94 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276165": {
+      "sim_id": "289086",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:22",
+      "status": "ONLINE",
+      "usage": "783.55 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276173": {
+      "sim_id": "289087",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:15",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722229276181": {
+      "sim_id": "289088",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "30/09/2025 23:33",
+      "status": "OFFLINE",
+      "usage": "79.97 KB",
+      "updated_at": "2025-10-03T22:01:24Z"
+    },
+    "89430301722122678475": {
+      "sim_id": "182731",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:42",
+      "status": "ONLINE",
+      "usage": "382.50 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678483": {
+      "sim_id": "182732",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/09/2025 23:57",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678491": {
+      "sim_id": "182733",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "16/09/2025 21:53",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678509": {
+      "sim_id": "182734",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/09/2025 23:05",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678517": {
+      "sim_id": "182735",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:45",
+      "status": "ONLINE",
+      "usage": "443.69 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678525": {
+      "sim_id": "182736",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:48",
+      "status": "ONLINE",
+      "usage": "314.76 KB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722122678533": {
+      "sim_id": "182737",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:31",
+      "status": "ONLINE",
+      "usage": "2.40 MB",
+      "updated_at": "2025-10-03T21:54:44Z"
+    },
+    "89430301722229274699": {
+      "sim_id": "288939",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:50",
+      "status": "ONLINE",
+      "usage": "595.16 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274707": {
+      "sim_id": "288940",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:32",
+      "status": "ONLINE",
+      "usage": "640.29 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274715": {
+      "sim_id": "288941",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "29/07/2025 07:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274723": {
+      "sim_id": "288942",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:42",
+      "status": "ONLINE",
+      "usage": "905.06 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274731": {
+      "sim_id": "288943",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "344.94 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274749": {
+      "sim_id": "288944",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "12/04/2024 22:47",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274756": {
+      "sim_id": "288945",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:43",
+      "status": "ONLINE",
+      "usage": "456.55 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274764": {
+      "sim_id": "288946",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 11:32",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274772": {
+      "sim_id": "288947",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 15:27",
+      "status": "OFFLINE",
+      "usage": "698.43 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274780": {
+      "sim_id": "288948",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:54",
+      "status": "ONLINE",
+      "usage": "973.53 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274798": {
+      "sim_id": "288949",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 09:26",
+      "status": "OFFLINE",
+      "usage": "542.06 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274806": {
+      "sim_id": "288950",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 14:24",
+      "status": "ONLINE",
+      "usage": "1.00 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274814": {
+      "sim_id": "288951",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:21",
+      "status": "ONLINE",
+      "usage": "30.45 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274822": {
+      "sim_id": "288952",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 11:16",
+      "status": "ONLINE",
+      "usage": "599.54 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274830": {
+      "sim_id": "288953",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 12:18",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274848": {
+      "sim_id": "288954",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 15:34",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274855": {
+      "sim_id": "288955",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 17:48",
+      "status": "OFFLINE",
+      "usage": "255.13 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274863": {
+      "sim_id": "288956",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:08",
+      "status": "OFFLINE",
+      "usage": "732.80 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274871": {
+      "sim_id": "288957",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 11:56",
+      "status": "OFFLINE",
+      "usage": "236.63 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274889": {
+      "sim_id": "288958",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 21:49",
+      "status": "ONLINE",
+      "usage": "2.77 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274897": {
+      "sim_id": "288959",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "28/09/2025 08:20",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274905": {
+      "sim_id": "288960",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 21:37",
+      "status": "ONLINE",
+      "usage": "294.49 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274913": {
+      "sim_id": "288961",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "17/09/2025 19:17",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274921": {
+      "sim_id": "288962",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:35",
+      "status": "ONLINE",
+      "usage": "385.91 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274939": {
+      "sim_id": "288963",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "30/09/2025 11:36",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274947": {
+      "sim_id": "288964",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:51",
+      "status": "ONLINE",
+      "usage": "644.60 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274954": {
+      "sim_id": "288965",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:39",
+      "status": "ONLINE",
+      "usage": "730.94 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274962": {
+      "sim_id": "288966",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "2.14 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274970": {
+      "sim_id": "288967",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:07",
+      "status": "ONLINE",
+      "usage": "1.48 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274988": {
+      "sim_id": "288968",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "10/05/2025 07:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229274996": {
+      "sim_id": "288969",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:35",
+      "status": "ONLINE",
+      "usage": "3.68 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275001": {
+      "sim_id": "288970",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/10/2025 21:33",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275019": {
+      "sim_id": "288971",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/09/2025 11:33",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275027": {
+      "sim_id": "288972",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "16/09/2025 16:00",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275035": {
+      "sim_id": "288973",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 07:00",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275043": {
+      "sim_id": "288974",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:09",
+      "status": "ONLINE",
+      "usage": "1.11 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275050": {
+      "sim_id": "288975",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:35",
+      "status": "ONLINE",
+      "usage": "801.11 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275068": {
+      "sim_id": "288976",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:41",
+      "status": "ONLINE",
+      "usage": "750.27 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275076": {
+      "sim_id": "288977",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "18/09/2025 18:43",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275084": {
+      "sim_id": "288978",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 10:33",
+      "status": "ONLINE",
+      "usage": "595.41 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275092": {
+      "sim_id": "288979",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 19:52",
+      "status": "ONLINE",
+      "usage": "583.13 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275100": {
+      "sim_id": "288980",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 15:52",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275118": {
+      "sim_id": "288981",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 23:40",
+      "status": "OFFLINE",
+      "usage": "392.48 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275126": {
+      "sim_id": "288982",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 18:57",
+      "status": "ONLINE",
+      "usage": "68.23 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275134": {
+      "sim_id": "288983",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:53",
+      "status": "ONLINE",
+      "usage": "4.53 MB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275142": {
+      "sim_id": "288984",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 00:27",
+      "status": "OFFLINE",
+      "usage": "380.35 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275159": {
+      "sim_id": "288985",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "07/03/2025 17:47",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275167": {
+      "sim_id": "288986",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 23:38",
+      "status": "OFFLINE",
+      "usage": "302.16 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275175": {
+      "sim_id": "288987",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 12:32",
+      "status": "ONLINE",
+      "usage": "506.35 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229275183": {
+      "sim_id": "288988",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "23/02/2024 12:10",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T21:58:08Z"
+    },
+    "89430301722229276199": {
+      "sim_id": "289089",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:09",
+      "status": "ONLINE",
+      "usage": "1.33 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276207": {
+      "sim_id": "289090",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 21:13",
+      "status": "ONLINE",
+      "usage": "3.97 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276215": {
+      "sim_id": "289091",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:55",
+      "status": "ONLINE",
+      "usage": "631.77 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276223": {
+      "sim_id": "289092",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:43",
+      "status": "OFFLINE",
+      "usage": "492.15 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276231": {
+      "sim_id": "289093",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:40",
+      "status": "OFFLINE",
+      "usage": "717.75 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276249": {
+      "sim_id": "289094",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "01/10/2025 00:55",
+      "status": "OFFLINE",
+      "usage": "117.72 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276256": {
+      "sim_id": "289095",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 21:54",
+      "status": "OFFLINE",
+      "usage": "503.39 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276264": {
+      "sim_id": "289096",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 22:01",
+      "status": "ONLINE",
+      "usage": "580.92 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276272": {
+      "sim_id": "289097",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:53",
+      "status": "ONLINE",
+      "usage": "1.05 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276280": {
+      "sim_id": "289098",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 02:01",
+      "status": "ONLINE",
+      "usage": "506.31 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276298": {
+      "sim_id": "289099",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 20:31",
+      "status": "OFFLINE",
+      "usage": "19.27 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276306": {
+      "sim_id": "289100",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:57",
+      "status": "ONLINE",
+      "usage": "828.69 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276314": {
+      "sim_id": "289101",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:52",
+      "status": "ONLINE",
+      "usage": "1.32 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276322": {
+      "sim_id": "289102",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "04/04/2025 19:26",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276330": {
+      "sim_id": "289103",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 17:11",
+      "status": "OFFLINE",
+      "usage": "104.50 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276348": {
+      "sim_id": "289104",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "19/09/2025 02:11",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276355": {
+      "sim_id": "289105",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "16/05/2024 19:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276363": {
+      "sim_id": "289106",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "29/07/2025 15:52",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276371": {
+      "sim_id": "289107",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "25/01/2025 03:22",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276389": {
+      "sim_id": "289108",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/05/2025 18:35",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276397": {
+      "sim_id": "289109",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:56",
+      "status": "ONLINE",
+      "usage": "3.01 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276405": {
+      "sim_id": "289110",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "23/02/2024 17:15",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276413": {
+      "sim_id": "289111",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "406.12 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276421": {
+      "sim_id": "289112",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "12/09/2025 07:03",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276439": {
+      "sim_id": "289113",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:59",
+      "status": "ONLINE",
+      "usage": "582.75 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276447": {
+      "sim_id": "289114",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/09/2025 12:25",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276454": {
+      "sim_id": "289115",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:06",
+      "status": "ONLINE",
+      "usage": "1.01 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276462": {
+      "sim_id": "289116",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:58",
+      "status": "ONLINE",
+      "usage": "621.66 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276470": {
+      "sim_id": "289117",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "24/02/2024 16:36",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276488": {
+      "sim_id": "289118",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/08/2024 11:53",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276496": {
+      "sim_id": "289119",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "27/09/2025 22:14",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276504": {
+      "sim_id": "289120",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "07/03/2025 07:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276512": {
+      "sim_id": "289121",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "23/05/2025 14:41",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276520": {
+      "sim_id": "289122",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "11/08/2025 14:25",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276538": {
+      "sim_id": "289123",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:07",
+      "status": "ONLINE",
+      "usage": "606.66 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276546": {
+      "sim_id": "289124",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 22:01",
+      "status": "ONLINE",
+      "usage": "589.21 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276553": {
+      "sim_id": "289125",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 21:52",
+      "status": "ONLINE",
+      "usage": "1.20 MB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276561": {
+      "sim_id": "289126",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 07:01",
+      "status": "ONLINE",
+      "usage": "184.26 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276579": {
+      "sim_id": "289127",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "19/10/2024 14:01",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276587": {
+      "sim_id": "289128",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "01/10/2025 11:44",
+      "status": "OFFLINE",
+      "usage": "167.04 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276595": {
+      "sim_id": "289129",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 14:12",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276603": {
+      "sim_id": "289130",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "27/03/2025 19:29",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276611": {
+      "sim_id": "289131",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "30/08/2025 13:02",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276629": {
+      "sim_id": "289132",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:12",
+      "status": "ONLINE",
+      "usage": "661.91 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276637": {
+      "sim_id": "289133",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:27",
+      "status": "ONLINE",
+      "usage": "977.95 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276645": {
+      "sim_id": "289134",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 00:12",
+      "status": "OFFLINE",
+      "usage": "8.26 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276652": {
+      "sim_id": "289135",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/09/2025 11:45",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276660": {
+      "sim_id": "289136",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "31/07/2025 23:26",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276678": {
+      "sim_id": "289137",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 13:43",
+      "status": "ONLINE",
+      "usage": "136.99 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722229276686": {
+      "sim_id": "289138",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 00:00",
+      "status": "ONLINE",
+      "usage": "74.99 KB",
+      "updated_at": "2025-10-03T22:02:54Z"
+    },
+    "89430301722232313294": {
+      "sim_id": "379475",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313302": {
+      "sim_id": "379476",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313310": {
+      "sim_id": "379477",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313328": {
+      "sim_id": "379478",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313336": {
+      "sim_id": "379479",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313344": {
+      "sim_id": "379480",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313351": {
+      "sim_id": "379481",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313369": {
+      "sim_id": "379482",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313377": {
+      "sim_id": "379483",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313385": {
+      "sim_id": "379484",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313393": {
+      "sim_id": "379485",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313401": {
+      "sim_id": "379486",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313419": {
+      "sim_id": "379487",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313427": {
+      "sim_id": "379488",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313435": {
+      "sim_id": "379489",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313443": {
+      "sim_id": "379490",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313450": {
+      "sim_id": "379491",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313468": {
+      "sim_id": "379492",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313476": {
+      "sim_id": "379493",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313484": {
+      "sim_id": "379494",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313492": {
+      "sim_id": "379495",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313500": {
+      "sim_id": "379496",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313518": {
+      "sim_id": "379497",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313526": {
+      "sim_id": "379498",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313534": {
+      "sim_id": "379499",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313542": {
+      "sim_id": "379500",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:43",
+      "status": "ONLINE",
+      "usage": "549.75 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313559": {
+      "sim_id": "379501",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 18:38",
+      "status": "ONLINE",
+      "usage": "787.11 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313567": {
+      "sim_id": "379502",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 15:17",
+      "status": "ONLINE",
+      "usage": "384.29 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313575": {
+      "sim_id": "379503",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:15",
+      "status": "ONLINE",
+      "usage": "784.85 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313583": {
+      "sim_id": "379504",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 16:49",
+      "status": "ONLINE",
+      "usage": "635.95 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313591": {
+      "sim_id": "379505",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 15:12",
+      "status": "ONLINE",
+      "usage": "347.07 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313609": {
+      "sim_id": "379506",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/09/2025 19:35",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313617": {
+      "sim_id": "379507",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 12:58",
+      "status": "OFFLINE",
+      "usage": "785.08 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313625": {
+      "sim_id": "379508",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313633": {
+      "sim_id": "379509",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "30/09/2025 21:52",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313641": {
+      "sim_id": "379510",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 03:19",
+      "status": "OFFLINE",
+      "usage": "392.47 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313658": {
+      "sim_id": "379511",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313666": {
+      "sim_id": "379512",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "02/10/2025 23:12",
+      "status": "OFFLINE",
+      "usage": "202.05 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313674": {
+      "sim_id": "379513",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "21/07/2025 20:47",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313682": {
+      "sim_id": "379514",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 21:57",
+      "status": "ONLINE",
+      "usage": "619.80 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313690": {
+      "sim_id": "379515",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:37",
+      "status": "ONLINE",
+      "usage": "3.03 MB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313708": {
+      "sim_id": "379516",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 17:45",
+      "status": "ONLINE",
+      "usage": "531.19 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313716": {
+      "sim_id": "379517",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:56",
+      "status": "ONLINE",
+      "usage": "698.07 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313724": {
+      "sim_id": "379518",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 18:12",
+      "status": "ONLINE",
+      "usage": "442.14 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313732": {
+      "sim_id": "379519",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 20:51",
+      "status": "ONLINE",
+      "usage": "967.20 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313740": {
+      "sim_id": "379520",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:21",
+      "status": "ONLINE",
+      "usage": "1.74 MB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313757": {
+      "sim_id": "379521",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 18:32",
+      "status": "ONLINE",
+      "usage": "586.18 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313765": {
+      "sim_id": "379522",
+      "country": "Ecuador",
+      "operator": "Otecel S.A.",
+      "start_fmt": "03/10/2025 20:16",
+      "status": "ONLINE",
+      "usage": "678.08 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313773": {
+      "sim_id": "379523",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 20:23",
+      "status": "ONLINE",
+      "usage": "546.21 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232313781": {
+      "sim_id": "379524",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "14/06/2025 22:48",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:05:48Z"
+    },
+    "89430301722232312791": {
+      "sim_id": "379425",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 22:00",
+      "status": "ONLINE",
+      "usage": "948.42 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312809": {
+      "sim_id": "379426",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 17:45",
+      "status": "ONLINE",
+      "usage": "1.20 MB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312817": {
+      "sim_id": "379427",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "24/09/2025 02:50",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312825": {
+      "sim_id": "379428",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312833": {
+      "sim_id": "379429",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 19:29",
+      "status": "ONLINE",
+      "usage": "836.75 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312841": {
+      "sim_id": "379430",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/04/2025 02:36",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312858": {
+      "sim_id": "379431",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312866": {
+      "sim_id": "379432",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312874": {
+      "sim_id": "379433",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312882": {
+      "sim_id": "379434",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312890": {
+      "sim_id": "379435",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312908": {
+      "sim_id": "379436",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312916": {
+      "sim_id": "379437",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312924": {
+      "sim_id": "379438",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312932": {
+      "sim_id": "379439",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "22/07/2025 13:22",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312940": {
+      "sim_id": "379440",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "08/05/2025 01:56",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312957": {
+      "sim_id": "379441",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312965": {
+      "sim_id": "379442",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "29/07/2025 05:19",
+      "status": "OFFLINE",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312973": {
+      "sim_id": "379443",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 21:35",
+      "status": "ONLINE",
+      "usage": "615.82 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312981": {
+      "sim_id": "379444",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 22:01",
+      "status": "ONLINE",
+      "usage": "588.57 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232312999": {
+      "sim_id": "379445",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 15:25",
+      "status": "ONLINE",
+      "usage": "347.20 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313005": {
+      "sim_id": "379446",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "03/10/2025 13:32",
+      "status": "ONLINE",
+      "usage": "344.34 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313013": {
+      "sim_id": "379447",
+      "country": "Colombia",
+      "operator": "Colombia Móvil S.A. ESP",
+      "start_fmt": "03/10/2025 21:27",
+      "status": "ONLINE",
+      "usage": "620.85 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313021": {
+      "sim_id": "379448",
+      "country": "Colombia",
+      "operator": "Comunicacion Celular S.A. (Comcel)",
+      "start_fmt": "02/10/2025 15:21",
+      "status": "ONLINE",
+      "usage": "245.16 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313039": {
+      "sim_id": "379449",
+      "country": "Colombia",
+      "operator": "Colombia Telecomunicaciones S.A. ESP",
+      "start_fmt": "03/10/2025 18:38",
+      "status": "ONLINE",
+      "usage": "795.77 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313047": {
+      "sim_id": "379450",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313054": {
+      "sim_id": "379451",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313062": {
+      "sim_id": "379452",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313070": {
+      "sim_id": "379453",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313088": {
+      "sim_id": "379454",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313096": {
+      "sim_id": "379455",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313104": {
+      "sim_id": "379456",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313112": {
+      "sim_id": "379457",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313120": {
+      "sim_id": "379458",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313138": {
+      "sim_id": "379459",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313146": {
+      "sim_id": "379460",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313153": {
+      "sim_id": "379461",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313161": {
+      "sim_id": "379462",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313179": {
+      "sim_id": "379463",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313187": {
+      "sim_id": "379464",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313195": {
+      "sim_id": "379465",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313203": {
+      "sim_id": "379466",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313211": {
+      "sim_id": "379467",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313229": {
+      "sim_id": "379468",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313237": {
+      "sim_id": "379469",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313245": {
+      "sim_id": "379470",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313252": {
+      "sim_id": "379471",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313260": {
+      "sim_id": "379472",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313278": {
+      "sim_id": "379473",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    },
+    "89430301722232313286": {
+      "sim_id": "379474",
+      "country": "",
+      "operator": "",
+      "start_fmt": "",
+      "status": "UNKNOWN",
+      "usage": "0.00 KB",
+      "updated_at": "2025-10-03T22:04:16Z"
+    }
+  },
+  "meta": {
+    "last_full_refresh": "2025-10-03T22:05:48Z",
+    "progress": {
+      "total": 500,
+      "done": 500
+    }
+  }
+}
