@@ -32,6 +32,10 @@
   const lastRefresh= document.getElementById('lastRefresh');
   const nextPlanned= document.getElementById('nextPlanned');
 
+  const bannerLastRefresh = document.getElementById('bannerLastRefresh');
+  const bannerNextPlanned = document.getElementById('bannerNextPlanned');
+  const updateBanner      = document.getElementById('updateBanner');
+
   if (!tbody) return;
 
   // ===== Estado =====
@@ -180,6 +184,7 @@
     }
     if (data.meta && data.meta.last_full_refresh){
       if (lastRefresh) lastRefresh.textContent = fmtIso(data.meta.last_full_refresh);
+      if (bannerLastRefresh) bannerLastRefresh.textContent = fmtIso(data.meta.last_full_refresh);
     }
 
     totalFiltered = (data.meta && typeof data.meta.filtered === 'number') ? data.meta.filtered : data.count;
@@ -275,6 +280,24 @@
       }
       if (j.next_planned && nextPlanned){
         nextPlanned.textContent = fmtIso(j.next_planned);
+      }
+
+      // Actualizar banner superior
+      if (j.meta?.last_full_refresh){
+        if (bannerLastRefresh) bannerLastRefresh.textContent = fmtIso(j.meta.last_full_refresh);
+        if (updateBanner) {
+          updateBanner.classList.remove('alert-warning');
+          updateBanner.classList.add('alert-info');
+        }
+      } else {
+        if (bannerLastRefresh) bannerLastRefresh.textContent = 'En progreso...';
+        if (updateBanner) {
+          updateBanner.classList.remove('alert-info');
+          updateBanner.classList.add('alert-warning');
+        }
+      }
+      if (j.next_planned && bannerNextPlanned){
+        bannerNextPlanned.textContent = fmtIso(j.next_planned);
       }
     } catch(e) {}
   }

@@ -39,6 +39,18 @@
 <body>
   <div class="container py-4">
 
+    <!-- Banner de última actualización -->
+    <div id="updateBanner" class="alert alert-info d-flex align-items-center justify-content-between mb-3 shadow-sm" role="alert" style="border-left: 5px solid #0d6efd;">
+      <div>
+        <i class="bi bi-clock-history"></i>
+        <strong>🕐 Última actualización completa:</strong> <span id="bannerLastRefresh" class="fw-bold">Calculando...</span>
+        <span class="text-muted ms-3">| Próxima actualización automática:</span> <span id="bannerNextPlanned" class="fw-bold">—</span>
+      </div>
+      <div>
+        <span id="bannerAutoLabel" class="badge bg-success">⟳ Auto cada 1h</span>
+      </div>
+    </div>
+
     <header class="mb-4 d-flex justify-content-between align-items-center">
       <div>
         <h1 class="h4 mb-1 text-primary">Listado de SIM Cards Kontigo</h1>

@@ -31,15 +31,15 @@ BASE_URL = os.getenv("FREEEWAY_BASE_URL", "https://ep.freeeway.com/services/port
 USERNAME = os.getenv("FREEEWAY_USER", os.getenv("FREEEWAY_USERNAME", "gerencia@rastrear.com.co"))
 PASSWORD = os.getenv("FREEEWAY_PASS", os.getenv("FREEEWAY_PASSWORD", "JNYf62vz3xN9S8m"))
 
-HTTP_TIMEOUT = float(os.getenv("FREEEWAY_HTTP_TIMEOUT", "25"))
-MAX_RETRIES  = int(os.getenv("FREEEWAY_MAX_RETRIES", "4"))
-BACKOFF_BASE = float(os.getenv("FREEEWAY_BACKOFF_BASE", "0.8"))
+HTTP_TIMEOUT = float(os.getenv("FREEEWAY_HTTP_TIMEOUT", "15"))
+MAX_RETRIES  = int(os.getenv("FREEEWAY_MAX_RETRIES", "2"))
+BACKOFF_BASE = float(os.getenv("FREEEWAY_BACKOFF_BASE", "0.5"))
 
-BATCH_SIZE = int(os.getenv("FREEEWAY_BATCH_SIZE", "50"))
+BATCH_SIZE = int(os.getenv("FREEEWAY_BATCH_SIZE", "100"))
 REFRESH_EVERY_SECONDS = int(os.getenv("FREEEWAY_REFRESH_SECONDS", str(60*60)))  # 1h
 
-WORKERS = int(os.getenv("FREEEWAY_WORKERS", "6"))                # bg refresco
-ONDEMAND_WORKERS = int(os.getenv("FREEEWAY_ONDEMAND_WORKERS", "4"))  # peticiones de la página
+WORKERS = int(os.getenv("FREEEWAY_WORKERS", "15"))               # bg refresco
+ONDEMAND_WORKERS = int(os.getenv("FREEEWAY_ONDEMAND_WORKERS", "8"))  # peticiones de la página
 
 HTTP_POOL_SIZE = max(16, (WORKERS + ONDEMAND_WORKERS) * 2)
 
@@ -150,7 +150,8 @@ def read_sims_csv() -> List[Dict[str, str]]:
             rows.append({
                 "ICCID": (r.get("ICCID") or "").strip(),
                 "IMSI": (r.get("IMSI") or "").strip(),
-                "MSISDN": (r.get("MSISDN") or "").strip()
+                "MSISDN": (r.get("MSISDN") or "").strip(),
+                "BILLING_STATUS": (r.get("Billing Status") or "").strip(),
             })
     return rows
 
@@ -182,22 +183,46 @@ def _get_json_with_retries(session: requests.Session, url: str) -> dict:
     raise last_err
 
 # ---------------- Enriquecimiento ----------------
-def fetch_sim_enrichment(iccid: str, session: requests.Session = None) -> Dict[str, Any]:
-    result = {"sim_id": "", "country": "", "operator": "", "start_fmt": "", "status": "", "usage": "", "billing_status": ""}
+
+def batch_lookup_sim_ids(iccids: List[str], session: requests.Session) -> Dict[str, str]:
+    """Resuelve múltiples ICCIDs a sim_ids en UNA sola llamada API.
+    Retorna {iccid: sim_id}."""
+    mapping: Dict[str, str] = {}
+    if not iccids:
+        return mapping
+    # La API soporta (IN iccid v1 v2 v3 ...) para batch lookup
+    MAX_PER_CALL = 50  # límite seguro por llamada
+    for chunk_start in range(0, len(iccids), MAX_PER_CALL):
+        chunk = iccids[chunk_start : chunk_start + MAX_PER_CALL]
+        filter_val = " ".join(chunk)
+        url = f"{BASE_URL}/simCard?filter=(IN iccid {filter_val})&pageSize={len(chunk)}"
+        try:
+            data = _get_json_with_retries(session, url)
+            for item in data.get("data", []):
+                icc = (item.get("attributes", {}).get("iccid") or "").strip()
+                sid = item.get("id", "")
+                if icc and sid:
+                    mapping[icc] = sid
+        except Exception as e:
+            app.logger.warning(f"Batch lookup falló para chunk de {len(chunk)}: {e}")
+    return mapping
+
+def fetch_sim_enrichment(iccid: str, session: requests.Session = None, sim_id: str = None) -> Dict[str, Any]:
+    """Enriquece una SIM. Si se proporciona sim_id, ahorra 1 llamada API."""
+    result = {"sim_id": "", "country": "", "operator": "", "start_fmt": "", "status": "", "usage": ""}
     local_session = session or make_session()
     try:
-        data1 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard?filter=(IN iccid {iccid})")
-        if data1.get("meta", {}).get("count", 0) <= 0:
-            result["status"] = "NOT FOUND"
-            return result
+        # Paso 1: obtener sim_id (si no viene pre-resuelto)
+        if not sim_id:
+            data1 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard?filter=(IN iccid {iccid})")
+            if data1.get("meta", {}).get("count", 0) <= 0:
+                result["status"] = "NOT FOUND"
+                return result
+            sim_id = data1["data"][0]["id"]
 
-        sim_id = data1["data"][0]["id"]
         result["sim_id"] = sim_id
-        billing_status_raw = data1.get("data", [{}])[0].get("attributes", {}).get("billingStatus", "")
-        result["billing_status"] = billing_status_raw
-        billing_status_raw = data1.get("data", [{}])[0].get("attributes", {}).get("billingStatus", "")
-        result["billing_status"] = billing_status_raw
 
+        # Paso 2: detalle + sesión
         data2 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard/{sim_id}?include=sessionInfo")
         attrs = get_session_attributes(data2)
 
@@ -217,6 +242,7 @@ def fetch_sim_enrichment(iccid: str, session: requests.Session = None) -> Dict[s
             result["country"] = ctry
             result["operator"] = oper
 
+        # Paso 3: uso de datos
         data3 = _get_json_with_retries(local_session, f"{BASE_URL}/simCard/{sim_id}/billingCycleUsageCounter")
         val = float(data3["data"]["attributes"]["data"])
         if val < 1_000_000:
@@ -233,15 +259,22 @@ def fetch_sim_enrichment(iccid: str, session: requests.Session = None) -> Dict[s
         return result
 
 def enrich_many_iccids(iccids: List[str], max_workers: int) -> Dict[str, Dict[str, Any]]:
+    """Enriquece múltiples ICCIDs. Hace batch lookup primero para ahorrar llamadas."""
     results: Dict[str, Dict[str, Any]] = {}
     if not iccids:
         return results
     iccids = list(dict.fromkeys(iccids))
     workers = max(1, min(max_workers, len(iccids)))
 
+    # Batch lookup: resolver todos los sim_ids de una vez (1-2 calls en vez de N)
+    lookup_session = make_session()
+    id_map = batch_lookup_sim_ids(iccids, lookup_session)
+    app.logger.info(f"Batch lookup: {len(id_map)}/{len(iccids)} sim_ids resueltos")
+
     def _job(ic):
         s = make_session()
-        return ic, fetch_sim_enrichment(ic, session=s)
+        sid = id_map.get(ic)  # ya resuelto, ahorra 1 call por SIM
+        return ic, fetch_sim_enrichment(ic, session=s, sim_id=sid)
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
         fut_map = {ex.submit(_job, ic): ic for ic in iccids}
@@ -252,7 +285,7 @@ def enrich_many_iccids(iccids: List[str], max_workers: int) -> Dict[str, Dict[st
                 results[ic] = info
             except Exception as e:
                 app.logger.error(f"Fallo enriqueciendo {iccid}: {e}")
-                results[iccid] = {"status": "ERROR", "sim_id": "", "country": "", "operator": "", "billing_status": "", "start_fmt": "", "usage": ""}
+                results[iccid] = {"status": "ERROR", "sim_id": "", "country": "", "operator": "", "start_fmt": "", "usage": ""}
     return results
 
 # ---------------- Worker de refresco completo ----------------
@@ -308,6 +341,11 @@ def start_background_refresh():
     app.logger.info("Worker de refresco iniciado (daemon)")
 
 # ---------------- Vistas ----------------
+
+@app.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "healthy", "timestamp": datetime.now().isoformat()}), 200
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     iccid = None
@@ -538,7 +576,7 @@ def sims_batch_from_cache():
                 now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
                 with CACHE_LOCK:
                     for iccid in new_missing:
-                        info = results.get(iccid, {"status":"ERROR","sim_id":"","country":"","operator":"","billing_status":"","start_fmt":"","usage":""})
+                        info = results.get(iccid, {"status":"ERROR","sim_id":"","country":"","operator":"","start_fmt":"","usage":""})
                         GLOBAL_CACHE.setdefault("by_iccid", {})[iccid] = {**info, "updated_at": now}
                 save_cache()
             finally:
@@ -558,10 +596,10 @@ def sims_batch_from_cache():
                 "iccid": iccid,
                 "imsi": r["IMSI"],
                 "msisdn": r["MSISDN"],
+                "billing_status": r.get("BILLING_STATUS", ""),
                 "sim_id":  c.get("sim_id", ""),
                 "country": c.get("country", ""),
                 "operator": c.get("operator", ""),
-                "billing_status": c.get("billing_status", ""),
                 "start_fmt": c.get("start_fmt", ""),
                 "status":  c.get("status", ""),
                 "usage":   c.get("usage", ""),
@@ -611,26 +649,28 @@ def sims_refresh_specific():
         now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
         with CACHE_LOCK:
             for ic in iccids:
-                info = results_map.get(ic, {"status":"ERROR","sim_id":"","country":"","operator":"","billing_status":"","start_fmt":"","usage":""})
+                info = results_map.get(ic, {"status":"ERROR","sim_id":"","country":"","operator":"","start_fmt":"","usage":""})
                 GLOBAL_CACHE.setdefault("by_iccid", {})[ic] = {**info, "updated_at": now}
         save_cache()
 
         items = []
-        base = read_sims_csv()
-        csv_by_iccid = {row["ICCID"]: row for row in base if row.get("ICCID")}
-        
         with CACHE_LOCK:
             by_iccid = GLOBAL_CACHE.get("by_iccid", {})
+
+        # Construir lookup del CSV para msisdn y billing_status
+        csv_rows = read_sims_csv()
+        csv_lookup = {r["ICCID"]: r for r in csv_rows if r.get("ICCID")}
+
         for ic in iccids:
             c = by_iccid.get(ic, {})
-            csv_row = csv_by_iccid.get(ic, {})
+            csv_row = csv_lookup.get(ic, {})
             items.append({
                 "iccid": ic,
                 "msisdn": csv_row.get("MSISDN", ""),
+                "billing_status": csv_row.get("BILLING_STATUS", ""),
                 "sim_id":  c.get("sim_id", ""),
                 "country": c.get("country", ""),
                 "operator": c.get("operator", ""),
-                "billing_status": c.get("billing_status", ""),
                 "start_fmt": c.get("start_fmt", ""),
                 "status":  c.get("status", ""),
                 "usage":   c.get("usage", ""),
