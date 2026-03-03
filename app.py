@@ -182,6 +182,53 @@ def _get_json_with_retries(session: requests.Session, url: str) -> dict:
             time.sleep(sleep_s)
     raise last_err
 
+def _post_json_with_retries(session: requests.Session, url: str, payload: dict) -> dict:
+    """Hace POST con reintentos y backoff exponencial."""
+    last_err = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            r = session.post(
+                url,
+                json=payload,
+                auth=HTTPBasicAuth(USERNAME, PASSWORD),
+                timeout=HTTP_TIMEOUT,
+                headers={"Content-Type": "application/json"}
+            )
+            if r.status_code in (408, 429) or 500 <= r.status_code < 600:
+                raise HTTPError(f"{r.status_code} {r.reason}")
+            r.raise_for_status()
+            return r.json()
+        except (Timeout, ConnectionError, HTTPError, RequestException) as e:
+            last_err = e
+            sleep_s = BACKOFF_BASE * (2 ** attempt) + random.random() * 0.3
+            time.sleep(sleep_s)
+    raise last_err
+
+def _patch_json_with_retries(session: requests.Session, url: str, payload: dict) -> dict:
+    """Hace PATCH con reintentos y backoff exponencial."""
+    last_err = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            r = session.patch(
+                url,
+                json=payload,
+                auth=HTTPBasicAuth(USERNAME, PASSWORD),
+                timeout=HTTP_TIMEOUT,
+                headers={
+                    "Content-Type": "application/vnd.api+json",
+                    "Accept": "application/vnd.api+json"
+                }
+            )
+            if r.status_code in (408, 429) or 500 <= r.status_code < 600:
+                raise HTTPError(f"{r.status_code} {r.reason}")
+            r.raise_for_status()
+            return r.json()
+        except (Timeout, ConnectionError, HTTPError, RequestException) as e:
+            last_err = e
+            sleep_s = BACKOFF_BASE * (2 ** attempt) + random.random() * 0.3
+            time.sleep(sleep_s)
+    raise last_err
+
 # ---------------- Enriquecimiento ----------------
 
 def batch_lookup_sim_ids(iccids: List[str], session: requests.Session) -> Dict[str, str]:
@@ -505,6 +552,10 @@ def index():
 def sims_page():
     return render_template("sims.html")
 
+@app.route("/manage-billing", methods=["GET"])
+def manage_billing_page():
+    return render_template("manage_billing.html")
+
 # ---------------- APIs ----------------
 @app.route("/api/sims/status", methods=["GET"])
 def sims_status():
@@ -680,6 +731,155 @@ def sims_refresh_specific():
         return jsonify({"ok": True, "count": len(items), "items": items})
     except Exception as e:
         app.logger.error(f"/api/sims/refresh error: {e}")
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+@app.route("/api/sims/change-billing-status", methods=["POST"])
+def change_billing_status():
+    """
+    Cambia el billing status de una o más SIM cards.
+    
+    Payload esperado:
+    {
+        "iccids": ["89...", "89..."],  // Lista de ICCIDs
+        "operation": "suspend",         // suspend | retire | resume | set_to_billing | set_to_testing
+        "execution_type": "permanent"   // permanent | scheduled (opcional, default: permanent)
+    }
+    
+    Operaciones disponibles:
+    - suspend: Suspender SIM (deja de funcionar temporalmente)
+    - retire: Retirar SIM (desactivación permanente)
+    - resume: Reanudar SIM suspendida
+    - set_to_billing: Activar en modo billing
+    - set_to_testing: Activar en modo testing
+    """
+    try:
+        payload = request.get_json(silent=True) or {}
+        iccids = payload.get("iccids") or []
+        operation = (payload.get("operation") or "").strip().lower()
+        execution_type = (payload.get("execution_type") or "permanent").strip().lower()
+        
+        # Validaciones
+        if not iccids:
+            return jsonify({"ok": False, "error": "Se requiere al menos un ICCID"}), 400
+        
+        valid_operations = ["suspend", "retire", "resume", "set_to_billing", "set_to_testing"]
+        if operation not in valid_operations:
+            return jsonify({"ok": False, "error": f"Operación inválida. Usar: {', '.join(valid_operations)}"}), 400
+        
+        iccids = [str(x).strip() for x in iccids if str(x).strip()]
+        iccids = list(dict.fromkeys(iccids))
+        
+        # Mapeo de operaciones a nombres de la API
+        operation_map = {
+            "suspend": "Suspend",
+            "retire": "Retire",
+            "resume": "Resume",
+            "set_to_billing": "Set to Billing",
+            "set_to_testing": "Set to Testing (activate)"
+        }
+        
+        api_operation = operation_map.get(operation)
+        
+        # Primero necesitamos obtener los sim_ids
+        session = make_session()
+        id_map = batch_lookup_sim_ids(iccids, session)
+        
+        results = []
+        errors = []
+        
+        for iccid in iccids:
+            sim_id = id_map.get(iccid)
+            if not sim_id:
+                errors.append({"iccid": iccid, "error": "SIM no encontrada"})
+                continue
+            
+            try:
+                # La API de Freeeway usa PATCH para cambiar billing status
+                url = f"{BASE_URL}/simCard/{sim_id}/billingStatus"
+                
+                # Probar diferentes formatos de payload
+                # Formato 1: JSON:API estándar con wrapper data
+                payloads_to_try = [
+                    # Formato simple - solo atributos
+                    {
+                        "operation": api_operation,
+                        "executionType": execution_type.capitalize()
+                    },
+                    # Formato JSON:API completo
+                    {
+                        "data": {
+                            "type": "BillingStatusChange",
+                            "attributes": {
+                                "operation": api_operation,
+                                "executionType": execution_type.capitalize()
+                            }
+                        }
+                    },
+                    # Formato con id de SIM
+                    {
+                        "data": {
+                            "type": "BillingStatusChange",
+                            "id": sim_id,
+                            "attributes": {
+                                "operation": api_operation,
+                                "executionType": execution_type.capitalize()
+                            }
+                        }
+                    }
+                ]
+                
+                response = None
+                last_error = None
+                
+                for idx, payload_api in enumerate(payloads_to_try):
+                    try:
+                        app.logger.info(f"Intento {idx+1}/3: URL={url}, Payload={payload_api}")
+                        response = _patch_json_with_retries(session, url, payload_api)
+                        app.logger.info(f"✓ Formato exitoso (intento {idx+1}): {payload_api}")
+                        break
+                    except HTTPError as e:
+                        last_error = e
+                        app.logger.warning(f"✗ Intento {idx+1} falló: {e}")
+                        if idx < len(payloads_to_try) - 1:
+                            continue
+                        else:
+                            raise
+                
+                results.append({
+                    "iccid": iccid,
+                    "sim_id": sim_id,
+                    "operation": operation,
+                    "status": "success",
+                    "message": f"Operación '{api_operation}' aplicada exitosamente"
+                })
+                
+                app.logger.info(f"Billing status cambiado: ICCID={iccid}, SIM_ID={sim_id}, Op={api_operation}")
+                
+            except HTTPError as he:
+                error_msg = f"Error HTTP: {str(he)}"
+                errors.append({"iccid": iccid, "sim_id": sim_id, "error": error_msg})
+                app.logger.error(f"Error cambiando billing status para {iccid}: {error_msg}")
+            except Exception as e:
+                error_msg = f"Error: {str(e)}"
+                errors.append({"iccid": iccid, "sim_id": sim_id, "error": error_msg})
+                app.logger.error(f"Error cambiando billing status para {iccid}: {error_msg}")
+        
+        response_data = {
+            "ok": True,
+            "total": len(iccids),
+            "successful": len(results),
+            "failed": len(errors),
+            "operation": operation,
+            "results": results
+        }
+        
+        if errors:
+            response_data["errors"] = errors
+        
+        return jsonify(response_data)
+        
+    except Exception as e:
+        app.logger.error(f"/api/sims/change-billing-status error: {e}")
         return jsonify({"ok": False, "error": str(e)}), 500
 
 # ---------------- Main ----------------
